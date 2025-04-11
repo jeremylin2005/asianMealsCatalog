@@ -6,7 +6,7 @@ function showCards() {
   const cardContainer = document.getElementById("card-container");
   const defaultCard = document.querySelector(".card");
 
-  for (let i = currentPageNumber; i < currentPageNumber + maxPerPage && i < meals.length; i++) { 
+  for (let i = currentPageNumber; i < currentPageNumber + maxPerPage && i < filteredMeals.length; i++) { 
     let meal = filteredMeals[i];
     let displayCard = defaultCard.cloneNode(true); 
     createMealCard(displayCard, meal);
@@ -98,5 +98,7 @@ function filterCards(search) {
     filteredMeals = meals;
   }
 
+  window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  
   showCards();
 }
