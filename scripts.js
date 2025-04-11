@@ -33,6 +33,7 @@ function showIngredientsPanel(meal){
   const ingredientsPanel = document.getElementById("ingredientsPanel");
   const title = document.getElementById("mealTitle");
   const list = document.getElementById("ingredientsList");
+  const instructionsList = document.getElementById("instructionsList");
 
   title.textContent = meal.title;
   list.innerHTML = "";
@@ -40,6 +41,13 @@ function showIngredientsPanel(meal){
     let li = document.createElement("li");
     li.textContent = ingredient;
     list.appendChild(li);
+  });
+
+  instructionsList.innerHTML = "";
+  meal.instructions.forEach(instruction =>{
+    let li = document.createElement("li");
+    li.textContent = instruction;
+    instructionsList.appendChild(li);
   });
 
   ingredientsPanel.classList.remove("hidden");
@@ -59,9 +67,15 @@ function removeLastCard() {
 
 document.addEventListener("DOMContentLoaded", () => {
   showCards();
+
   document.getElementById("closeIngredientsPanel").addEventListener("click", () => {
     document.getElementById("ingredientsPanel").classList.add("hidden");
   });  
+
+  document.getElementById("searchInput").addEventListener("input", function () {
+    const query = this.value.toLowerCase();
+    filterCards(query);
+  });
 });
 
 
@@ -71,3 +85,17 @@ window.addEventListener("scroll", () => {
     showCards();
   }
 });
+
+function filterCards(query) {
+  const cardContainer = document.getElementById("card-container");
+  cardContainer.innerHTML = "";
+  const defaultCard = document.querySelector(".card");
+
+  meals.forEach(meal => {
+    if (meal.title.toLowerCase().includes(query)) {
+      const displayCard = defaultCard.cloneNode(true);
+      createMealCard(displayCard, meal);
+      cardContainer.appendChild(displayCard);
+    }
+  });
+}

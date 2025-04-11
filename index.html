@@ -3,6 +3,7 @@
   <head>
     <title>Classic Meals</title>
     <meta name="description" content="A Catalog of Amazing Meals" />
+    <meta charset = "UTF-8"/>
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script type="text/javascript" src="meals.js"></script>
@@ -12,7 +13,7 @@
   <body>
     <header class="main-header">
       <div class="searchBar">
-        <input type="text" id="searchInput" placeholder="Search for a meal..." />
+        <input type="text" id="searchInput" placeholder="Search for a meal or click for a recipe" />
       </div>
     </header>
 
@@ -28,6 +29,8 @@
       <button id = "closeIngredientsPanel" class = "closeButton">X</button>
       <h3 id = "mealTitle">Meal Title</h3>
       <ul id = "ingredientsList"></ul>
+      <h4>Instructions</h4>
+      <ol id = "instructionsList"></ol>
     </div>
     
     <!-- <div class="footer">
