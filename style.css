@@ -2,7 +2,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color: #F1F1F2;
+  background-color:  #eaeef2;
   position: relative;
   z-index: 0;
   overflow-x: clip;
@@ -20,7 +20,7 @@ body {
   text-align: center;
   margin: 0;
   font-size: 8em;
-  font-family: 'Raleway', serif;
+  font-family: 'Inter', serif;
   font-weight: normal;
   color: #1995AD;
 }
@@ -38,8 +38,8 @@ body {
   max-width: 600px;
   padding: 14px 20px;
   font-size: 1.1rem;
-  font-family: 'Raleway', sans-serif;
-  border: 2px solid #a6d6ee;
+  font-family: 'Inter', sans-serif;
+  border: 2px solid rgb(100, 98, 98);
   border-radius: 15px;
   backdrop-filter: blur(12px);
   background-color: rgba(255, 255, 255, 0.7);
@@ -64,19 +64,20 @@ body {
 
 .card {
   width: 200px;
-  background: linear-gradient(to top, #CEE6F2 15%, rgba(255, 255, 255, 0) 100%);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: #ffffff; 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);   
   border-radius: 15px;
   margin: 5px;
-  font-family: 'Raleway', serif;
-  color: 	#2A3D66;
+  font-family: 'Inter', serif;
+  color: 	rgb(100, 98, 98);
 }
 .card-content {
   bottom: 0;
   width: 100%;
   text-align: center;
-  font-family: 'Raleway', serif;
+  font-family: 'Inter', serif;
   padding-top: 70px; 
+  padding-bottom: 10px;
 }
 
 .card-content h2 {
@@ -84,6 +85,7 @@ body {
   text-align: center;
   min-height: 36px;
   padding: 0 12px;
+  padding-top: 15px;
 }
 
 .card img {
@@ -100,7 +102,7 @@ body {
 }
 
 #ingredientsPanel {
-  font-family: 'Raleway', serif;
+  font-family: 'Inter', serif;
   font-size: 25px;
   position: fixed;
   top: 0;
@@ -122,7 +124,7 @@ body {
 
 #ingredientsPanel h3 {
   font-size: 30px;
-  font-family: 'Raleway', serif;
+  font-family: 'Inter', serif;
   margin-top: 0;
 }
 
