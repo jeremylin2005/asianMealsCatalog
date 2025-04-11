@@ -1,31 +1,38 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>LA TV Shows | Home</title>
-    <meta name="description" content="A Catalog of Shows Set in Los Angeles" />
+    <title>Classic Meals</title>
+    <meta name="description" content="A Catalog of Amazing Meals" />
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="meals.js"></script>
     <script type="text/javascript" src="scripts.js"></script>
   </head>
 
   <body>
     <header class="main-header">
-      <h1 class="title">LA TV Shows</h1>
+      <div class="searchBar">
+        <input type="text" id="searchInput" placeholder="Search for a meal..." />
+      </div>
     </header>
+
     <div id="card-container"></div>
     <div class="card" style="display: none">
       <div class="card-content">
-        <h2>TV Show Title</h2>
-        <img src="" alt="TV Show Poster" />
-        <ul>
-          <li>Bullet Point 1</li>
-          <li>Bullet Point 2</li>
-          <li>Bullet Point 3</li>
-        </ul>
+        <img src=""/>
+        <h2>Food Title</h2>
       </div>
     </div>
-    <div class="footer">
+
+    <div id = "ingredientsPanel" class = "hidden">
+      <button id = "closeIngredientsPanel" class = "closeButton">X</button>
+      <h3 id = "mealTitle">Meal Title</h3>
+      <ul id = "ingredientsList"></ul>
+    </div>
+    
+    <!-- <div class="footer">
       <button onclick="quoteAlert();">Get A Quote!</button>
       <button onclick="removeLastCard();">Remove A Card!</button>
-    </div>
+    </div> -->
   </body>
 </html>
