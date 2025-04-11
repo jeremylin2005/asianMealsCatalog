@@ -8,48 +8,44 @@ body {
   overflow-x: clip;
 }
 
-.main-header {
-  position: sticky;
-  top: 30px;
-  z-index: 1000;
+#filterPanel {
+  position: fixed;
+  right: 0;
+  width: 625px;
+  height: fit-content;
+  background-color: #ffffff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+  font-family: 'Inter', sans-serif;
+  color: rgb(34, 33, 33);
+  padding: 20px;
+  margin: 0 20px 20px auto;
+  z-index: 999;
+  top: 24px;
+}
+
+#filterPanel h3 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+#filterPanel input {
   width: 100%;
-  margin: 0 auto;
-}
-
-.title {
-  text-align: center;
-  margin: 0;
-  font-size: 8em;
-  font-family: 'Inter', serif;
-  font-weight: normal;
-  color: #1995AD;
-}
-
-.searchBar {
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 35px;
-  align-items: center;
-  padding-top: 20px;
-}
-
-#searchInput {
-  width: 60%;
   max-width: 600px;
   padding: 14px 20px;
   font-size: 1.1rem;
   font-family: 'Inter', sans-serif;
   border: 2px solid rgb(100, 98, 98);
   border-radius: 15px;
-  backdrop-filter: blur(12px);
   background-color: rgba(255, 255, 255, 0.7);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   outline: none;
   transition: box-shadow 0.2s ease;
+  box-sizing: border-box;
 }
 
-#searchInput:focus {
-  box-shadow: 0 0 10px rgba(25, 149, 173, 0.4);
+#filterPanel input:focus {
+  box-shadow: 0 0 1 0px rgba(0, 0, 0, 0.2);
 }
 
 #card-container {
@@ -60,6 +56,7 @@ body {
   padding: 0px;
   max-width: 1200px;  
   margin: 0 auto;  
+  margin-top: 20px;
 }
 
 .card {
@@ -69,7 +66,8 @@ body {
   border-radius: 15px;
   margin: 5px;
   font-family: 'Inter', serif;
-  color: 	rgb(100, 98, 98);
+  color: 	rgb(34, 33, 33);
+  transition: transform 0.3s ease;
 }
 .card-content {
   bottom: 0;
@@ -94,11 +92,10 @@ body {
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
 }
 
-.card img:hover {
-  transform: scale(1.08);
+.card:hover{
+  transform: scale(1.1);
 }
 
 #ingredientsPanel {

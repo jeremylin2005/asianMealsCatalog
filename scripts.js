@@ -10,6 +10,9 @@ function showCards() {
     let meal = filteredMeals[i];
     let displayCard = defaultCard.cloneNode(true); 
     createMealCard(displayCard, meal);
+    displayCard.addEventListener("click", () => {
+      showIngredientsPanel(meal);
+    });
     cardContainer.appendChild(displayCard);
   }
   currentPageNumber += maxPerPage;
@@ -25,9 +28,6 @@ function createMealCard(displayCard, meal) {
   cardImage.src = meal.image;
   cardImage.alt = meal.title;
 
-  cardImage.addEventListener("click", () => {
-    showIngredientsPanel(meal);
-  });
 }
 
 function showIngredientsPanel(meal){
@@ -99,6 +99,6 @@ function filterCards(search) {
   }
 
   window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-  
+
   showCards();
 }
