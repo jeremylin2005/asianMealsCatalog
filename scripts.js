@@ -1,4 +1,5 @@
 let currentPageNumber = 0;
+let filteredMeals = meals;
 const maxPerPage = 20;
 
 function showCards() {
@@ -6,8 +7,8 @@ function showCards() {
   const defaultCard = document.querySelector(".card");
 
   for (let i = currentPageNumber; i < currentPageNumber + maxPerPage && i < meals.length; i++) { 
-    const meal = meals[i];
-    const displayCard = defaultCard.cloneNode(true); 
+    let meal = filteredMeals[i];
+    let displayCard = defaultCard.cloneNode(true); 
     createMealCard(displayCard, meal);
     cardContainer.appendChild(displayCard);
   }
@@ -73,8 +74,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });  
 
   document.getElementById("searchInput").addEventListener("input", function () {
-    const query = this.value.toLowerCase();
-    filterCards(query);
+    let search = this.value.toLowerCase();
+    filterCards(search);
   });
 });
 
@@ -86,16 +87,16 @@ window.addEventListener("scroll", () => {
   }
 });
 
-function filterCards(query) {
+function filterCards(search) {
   const cardContainer = document.getElementById("card-container");
   cardContainer.innerHTML = "";
-  const defaultCard = document.querySelector(".card");
+  currentPageNumber = 0;
 
-  meals.forEach(meal => {
-    if (meal.title.toLowerCase().includes(query)) {
-      const displayCard = defaultCard.cloneNode(true);
-      createMealCard(displayCard, meal);
-      cardContainer.appendChild(displayCard);
-    }
-  });
+  if(search){
+    filteredMeals = meals.filter(meal => meal.title.toLowerCase().includes(search));
+  } else {
+    filteredMeals = meals;
+  }
+
+  showCards();
 }
