@@ -25,28 +25,96 @@ body {
 }
 
 #filterPanel h3 {
-  margin-top: 0;
+  margin-top: 20px;
   font-size: 20px;
 }
 
 #filterPanel input {
   width: 100%;
-  max-width: 600px;
   padding: 14px 20px;
   font-size: 1.1rem;
   font-family: 'Inter', sans-serif;
   border: 2px solid rgb(100, 98, 98);
   border-radius: 15px;
   background-color: rgba(255, 255, 255, 0.7);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   outline: none;
   transition: box-shadow 0.2s ease;
   box-sizing: border-box;
+  margin: auto auto auto auto;
 }
 
 #filterPanel input:focus {
   box-shadow: 0 0 1 0px rgba(0, 0, 0, 0.2);
 }
+
+.buttonManagerAZ{
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.buttonManagerAZ button {
+  flex: 1;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  background-color: white;
+  color: rgb(66, 65, 65);
+  border: 2px solid rgb(100, 98, 98);
+  border-radius: 10px;
+  transition: background-color 0.2s ease;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonManagerAZ button:hover {
+  background-color: #d0d2d4;
+}
+
+.buttonManagerAZ button.on{
+  background-color: rgb(100, 98, 98);
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.buttonManagerIngredients{
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.buttonManagerIngredients button {
+  flex: 1;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  background-color: white;
+  color: rgb(66, 65, 65);
+  border: 2px solid rgb(100, 98, 98);
+  border-radius: 10px;
+  transition: background-color 0.2s ease;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonManagerIngredients button:hover {
+  background-color: #d0d2d4;
+}
+
+
+.buttonManagerIngredients button.on{
+  background-color: rgb(100, 98, 98);
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
 
 #card-container {
   display: flex;
