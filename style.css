@@ -6,22 +6,39 @@ body {
   position: relative;
   z-index: 0;
   overflow-x: clip;
+  overflow-y: scroll;
 }
+
+.mainPage {
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  height: 100%;
+  min-height: 100vh;
+}
+
+.sidePanel {
+  background-color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
 
 #filterPanel {
   position: fixed;
+  top: 0;
   right: 0;
-  width: 625px;
-  height: fit-content;
+  width: 26vw;
+  height: 100vh;
   background-color: #ffffff;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-  border-radius: 15px;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  border-left: 1px solid #ccc;
   font-family: 'Inter', sans-serif;
   color: rgb(34, 33, 33);
   padding: 20px;
-  margin: 0 20px 20px auto;
+  box-sizing: border-box;
   z-index: 999;
-  top: 24px;
+  overflow-y: auto;
 }
 
 #filterPanel h3 {
@@ -40,11 +57,10 @@ body {
   outline: none;
   transition: box-shadow 0.2s ease;
   box-sizing: border-box;
-  margin: auto auto auto auto;
 }
 
 #filterPanel input:focus {
-  box-shadow: 0 0 1 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
 
 .buttonManagerAZ{
@@ -117,14 +133,15 @@ body {
 
 
 #card-container {
+  margin-left: 26vw;  
+  margin-right: 26vw; 
+  width: 48vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  padding: 0px;
-  max-width: 1200px;  
-  margin: 0 auto;  
   margin-top: 20px;
+  box-sizing: border-box;
 }
 
 .card {
@@ -167,20 +184,21 @@ body {
 }
 
 #ingredientsPanel {
-  font-family: 'Inter', serif;
-  font-size: 25px;
   position: fixed;
   top: 0;
   left: 0;
-  width: 600px;
+  width: 26.5vw;
   height: 100vh;
   padding: 20px;
-  padding-right: 50px;
-  overflow-y: auto;
-  z-index: 10001;
+  padding-right: 30px;
   background-color: white;
-  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  box-sizing: border-box;
+  font-family: 'Inter', serif;
+  font-size: 18px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  z-index: 10001;
 }
 
 #ingredientsPanel.hidden {
@@ -188,15 +206,17 @@ body {
 }
 
 #ingredientsPanel h3 {
-  font-size: 30px;
-  font-family: 'Inter', serif;
+  font-size: 28px;
   margin-top: 0;
 }
 
-#instructionsList{
-  font-size: 20px;
+#instructionsList {
+  font-size: 18px;
 }
 
+#instructionsList li {
+  padding: 10px 0;
+}
 #instructionsList li{
   padding: 10px;
 }
