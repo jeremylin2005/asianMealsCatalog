@@ -154,6 +154,11 @@ document.addEventListener("DOMContentLoaded", () => {
     updateButtons();
     filterCards(document.getElementById("searchInput").value.toLowerCase());
   });
+
+  document.getElementById("toggleFilter").addEventListener("click", () => {
+    const filterPanel = document.getElementById("filterPanel");
+    filterPanel.classList.toggle("hidden");
+  });
 });
 
 function updateButtons(){
