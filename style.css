@@ -1,201 +1,35 @@
-html,
-body {
+html, body {
   margin: 0;
   padding: 0;
-  background-color:  #eaeef2;
-  position: relative;
-  z-index: 0;
-  overflow-x: clip;
-  overflow-y: scroll;
+  background-color: #eaeef2;
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
 }
 
+/* MAIN GRID */
 .mainPage {
   display: grid;
-  grid-template-columns: 25% 50% 25%;
-  height: 100%;
+  grid-template-columns: 26vw auto 26vw;
   min-height: 100vh;
 }
 
-.sidePanel {
-  background-color: white;
-  padding: 20px;
-  box-sizing: border-box;
-  overflow-y: auto;
-}
-
-
-#filterPanel {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 26vw;
+/* === SIDE PANELS === */
+#filterPanel,
+#ingredientsPanel {
   height: 100vh;
-  background-color: #ffffff;
-  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
-  border-left: 1px solid #ccc;
-  font-family: 'Inter', sans-serif;
-  color: rgb(34, 33, 33);
   padding: 20px;
   box-sizing: border-box;
-  z-index: 999;
+  background-color: white;
   overflow-y: auto;
-}
-
-#filterPanel h3 {
-  margin-top: 20px;
-  font-size: 20px;
-}
-
-#filterPanel input {
-  width: 100%;
-  padding: 14px 20px;
-  font-size: 1.1rem;
-  font-family: 'Inter', sans-serif;
-  border: 2px solid rgb(100, 98, 98);
-  border-radius: 15px;
-  background-color: rgba(255, 255, 255, 0.7);
-  outline: none;
-  transition: box-shadow 0.2s ease;
-  box-sizing: border-box;
-}
-
-#filterPanel input:focus {
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-}
-
-.buttonManagerAZ{
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  margin-top: 15px;
-}
-
-.buttonManagerAZ button {
-  flex: 1;
-  padding: 12px 20px;
   font-size: 1rem;
-  font-family: 'Inter', sans-serif;
-  background-color: white;
-  color: rgb(66, 65, 65);
-  border: 2px solid rgb(100, 98, 98);
-  border-radius: 10px;
-  transition: background-color 0.2s ease;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-.buttonManagerAZ button:hover {
-  background-color: #d0d2d4;
-}
-
-.buttonManagerAZ button.on{
-  background-color: rgb(100, 98, 98);
-  color: white;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.buttonManagerIngredients{
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  margin-top: 15px;
-}
-
-.buttonManagerIngredients button {
-  flex: 1;
-  padding: 12px 20px;
-  font-size: 1rem;
-  font-family: 'Inter', sans-serif;
-  background-color: white;
-  color: rgb(66, 65, 65);
-  border: 2px solid rgb(100, 98, 98);
-  border-radius: 10px;
-  transition: background-color 0.2s ease;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.buttonManagerIngredients button:hover {
-  background-color: #d0d2d4;
-}
-
-
-.buttonManagerIngredients button.on{
-  background-color: rgb(100, 98, 98);
-  color: white;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-
-
-#card-container {
-  margin-left: 26vw;  
-  margin-right: 26vw; 
-  width: 48vw;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 20px;
-  box-sizing: border-box;
-}
-
-.card {
-  width: 200px;
-  background: #ffffff; 
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);   
-  border-radius: 15px;
-  margin: 5px;
-  font-family: 'Inter', serif;
-  color: 	rgb(34, 33, 33);
-  transition: transform 0.3s ease;
-}
-.card-content {
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  font-family: 'Inter', serif;
-  padding-top: 70px; 
-  padding-bottom: 10px;
-}
-
-.card-content h2 {
-  font-size: 15px;
-  text-align: center;
-  min-height: 36px;
-  padding: 0 12px;
-  padding-top: 15px;
-}
-
-.card img {
-  width: 170px;
-  height: 170px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-.card:hover{
-  transform: scale(1.1);
-}
-
+/* LEFT INGREDIENT PANEL */
 #ingredientsPanel {
   position: fixed;
-  top: 0;
   left: 0;
-  width: 26.5vw;
-  height: 100vh;
-  padding: 20px;
-  padding-right: 30px;
-  background-color: white;
-  overflow-y: auto;
-  box-sizing: border-box;
-  font-family: 'Inter', serif;
-  font-size: 18px;
+  top: 0;
+  width: 26vw;
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   z-index: 10001;
@@ -205,22 +39,128 @@ body {
   transform: translateX(-100%);
 }
 
-#ingredientsPanel h3 {
-  font-size: 28px;
+/* RIGHT FILTER PANEL */
+#filterPanel {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 26vw;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  border-left: 1px solid #ccc;
+  z-index: 999;
+}
+
+#card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: calc(100vw - 52vw); /* Leaves space for 26vw on both sides */
+  margin-left: 26vw;
+  margin-top: 20px;
+  box-sizing: border-box;
+}
+
+
+.card {
+  width: 200px;
+  background: #ffffff; 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);   
+  border-radius: 15px;
+  margin: 5px;
+  font-family: 'Inter', serif;
+  color: rgb(34, 33, 33);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-content {
+  text-align: center;
+  padding-top: 70px;
+  padding-bottom: 10px;
+}
+
+.card img {
+  width: 80%;
+  max-width: 170px;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-content h2 {
+  font-size: 15px;
+  min-height: 36px;
+  margin: 12px 0;
+}
+
+/* PANEL BUTTONS */
+.buttonManagerAZ,
+.buttonManagerIngredients {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.buttonManagerAZ button,
+.buttonManagerIngredients button {
+  flex: 1;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: 2px solid rgb(100, 98, 98);
+  border-radius: 10px;
+  background: white;
+  color: rgb(66, 65, 65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s ease;
+}
+
+.buttonManagerAZ button.on,
+.buttonManagerIngredients button.on {
+  background-color: rgb(100, 98, 98);
+  color: white;
+}
+
+/* INPUTS */
+#filterPanel input {
+  width: 100%;
+  padding: 14px 20px;
+  font-size: 1.1rem;
+  border: 2px solid rgb(100, 98, 98);
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.7);
+  outline: none;
+  margin-bottom: 10px;
+}
+
+#filterPanel input:focus {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+/* TEXT */
+#ingredientsPanel h3,
+#filterPanel h3 {
   margin-top: 0;
+  font-size: 24px;
 }
 
 #instructionsList {
   font-size: 18px;
+  padding-left: 20px;
 }
 
 #instructionsList li {
-  padding: 10px 0;
-}
-#instructionsList li{
-  padding: 10px;
+  margin-bottom: 10px;
 }
 
+/* CLOSE BUTTON */
 .closeButton {
   position: absolute;
   top: 10px;
@@ -230,30 +170,8 @@ body {
   border: none;
   color: #444;
   cursor: pointer;
-  z-index: 1001;
-  transition: color 0.2s ease;
 }
 
 .closeButton:hover {
   color: red;
-}
-
-.footer {
-  display: flex;
-  justify-content: center;
-  padding: 10px;
-}
-
-button {
-  text-align: center;
-  background-color: #666;
-  border: none;
-  padding-left: 10px;
-  padding-right: 10px;
-  height: 40px;
-  border-radius: 10px;
-  color: white;
-  font-size: 22px;
-  cursor: pointer;
-  margin: 5px;
 }
