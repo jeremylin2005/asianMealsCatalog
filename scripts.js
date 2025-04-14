@@ -5,6 +5,14 @@ const originalMeals = [...meals];
 let sortAlpha = false;
 let sortReverseAlpha = false;
 const maxPerPage = 20;
+let light = 9;
+let moderate = 10;
+let advanced = 14;
+let cheap = 6;
+let regular = 7;
+let expensive = 9;
+
+getIngredientsSizing(meals);
 
 function showCards() {
   const cardContainer = document.getElementById("card-container");
@@ -32,6 +40,24 @@ function createMealCard(displayCard, meal) {
   cardImage.src = meal.image;
   cardImage.alt = meal.title;
 
+  let difficultyLabel = displayCard.querySelector(".difficulty");
+  if(meal.ingredients.length <= light){
+    difficultyLabel.textContent = "Easy";
+  } else if(meal.ingredients.length >= moderate && meal.ingredients.length < advanced){
+    difficultyLabel.textContent = "Medium";
+  } else {
+    difficultyLabel.textContent = "Hard";
+  }
+
+  let priceLabel = displayCard.querySelector(".price");
+  if(meal.estimatedCostUSD <= cheap){
+    priceLabel.textContent = "$";
+  } else if(meal.estimatedCostUSD > cheap && meal.estimatedCostUSD < expensive){
+    priceLabel.textContent = "$$";
+  } else {
+    priceLabel.textContent = "$$$";
+  }
+
 }
 
 function filterCards(search) {
@@ -47,9 +73,9 @@ function filterCards(search) {
 
   if(filterIngredientsSize != 0){ //PREP SIZE OR INGREDIENT SIZE
     filteredMeals = filteredMeals.filter(meal => {
-      if(filterIngredientsSize == 1) return meal.ingredients.length <= 9;
-      if(filterIngredientsSize == 2) return meal.ingredients.length >= 10 && meal.ingredients.length <= 13;
-      if(filterIngredientsSize == 3) return meal.ingredients.length >= 14;
+      if(filterIngredientsSize == 1) return meal.ingredients.length <= light;
+      if(filterIngredientsSize == 2) return meal.ingredients.length >= moderate && meal.ingredients.length < advanced;
+      if(filterIngredientsSize == 3) return meal.ingredients.length >= advanced;
     })
   };
 
@@ -207,7 +233,7 @@ window.addEventListener("scroll", () => {
 });
 
 function getIngredientsSizing(meals) { //Runs once to get the numbers never used again
-  let sortedIngredientsLength = meals.map(meal => meal.ingredients.length).sort((a, b) => a - b);
+  let sortedIngredientsLength = meals.map(meal => meal.estimatedCostUSD).sort((a, b) => a - b);
   let total =  sortedIngredientsLength.length;
 
   let smallIndex = Math.floor(total / 3);
