@@ -104,40 +104,29 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.buttonManagerIngredients{
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
+.dropdownPrepFilter {
   margin-top: 15px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
 }
 
-.buttonManagerIngredients button {
-  flex: 1;
-  padding: 12px 20px;
+.dropdownPrepFilter select {
+  width: 100%;
+  padding: 10px;
   font-size: 1rem;
-  font-family: 'Inter', sans-serif;
-  background-color: white;
-  color: rgb(66, 65, 65);
   border: 2px solid rgb(100, 98, 98);
   border-radius: 10px;
-  transition: background-color 0.2s ease;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: white;
+  color: rgb(34, 33, 33);
+  font-family: inherit;
 }
 
-.buttonManagerIngredients button:hover {
-  background-color: #d0d2d4;
+.dropdownPrepFilter label {
+  font-weight: bold;         
+  display: block;            
+  margin-top: 15px;
+  margin-bottom: 15px;          
 }
-
-
-.buttonManagerIngredients button.on{
-  background-color: rgb(100, 98, 98);
-  color: white;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
 
 
 #card-container {
@@ -218,22 +207,48 @@ body {
 }
 
 .price {
-  background-color: #d4edda;
+  background-color: white;
+  color: rgb(66, 65, 65);
 }
 
-.fav-button {
+.time {
+  background-color: white;
+  color: rgb(66, 65, 65);
+}
+
+.easy{
+  background-color: #4CAF50; 
+  color: white;
+}
+
+.medium{
+  background-color: #FFA500; 
+  color: white;
+}
+
+.hard{
+  background-color: #F44336; 
+  color: white;
+}
+
+.favouriteButton {
   background: none;
-  border: none;
+  border: 2px solid #ff6961;
+  outline: none;
   font-size: 20px;
   color: #ff6961;
   cursor: pointer;
-  padding: 0;
+  padding: 5px 5px; 
   margin-left: auto;
   margin-right: 0;
-  transition: transform 0.2s ease;
+  border-radius: 10px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.fav-button:hover {
+.favouriteButton:hover {
   transform: scale(1.2);
 }
 

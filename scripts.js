@@ -2,6 +2,7 @@ let currentPageNumber = 0;
 let filteredMeals = meals;
 let filterIngredientsSize = 0;
 const originalMeals = [...meals];
+let favouritesList = [];
 let sortAlpha = false;
 let sortReverseAlpha = false;
 const maxPerPage = 20;
@@ -11,6 +12,9 @@ let advanced = 14;
 let cheap = 6;
 let regular = 7;
 let expensive = 9;
+let quick = 30;
+let average = 31;
+let long = 41;
 
 getIngredientsSizing(meals);
 
@@ -43,10 +47,13 @@ function createMealCard(displayCard, meal) {
   let difficultyLabel = displayCard.querySelector(".difficulty");
   if(meal.ingredients.length <= light){
     difficultyLabel.textContent = "Easy";
+    difficultyLabel.classList.add("easy");
   } else if(meal.ingredients.length >= moderate && meal.ingredients.length < advanced){
     difficultyLabel.textContent = "Medium";
+    difficultyLabel.classList.add("medium");
   } else {
     difficultyLabel.textContent = "Hard";
+    difficultyLabel.classList.add("hard");
   }
 
   let priceLabel = displayCard.querySelector(".price");
@@ -55,8 +62,29 @@ function createMealCard(displayCard, meal) {
   } else if(meal.estimatedCostUSD > cheap && meal.estimatedCostUSD < expensive){
     priceLabel.textContent = "$$";
   } else {
-    priceLabel.textContent = "$$$";
+    priceLabel.textContent = "$$$";  }
+
+  let timeLabel = displayCard.querySelector(".time");
+  if(meal.estimatedCookTimeMins <= quick){
+    timeLabel.textContent = `${meal.estimatedCookTimeMins} mins`;
+  } else if(meal.estimatedCookTimeMins > quick && meal.estimatedCookTimeMins < average){
+    timeLabel.textContent = `${meal.estimatedCookTimeMins} mins`; 
+  } else {
+    timeLabel.textContent = `${meal.estimatedCookTimeMins} mins`;
   }
+
+  let heartButton = displayCard.querySelector(".favouriteButton");
+  heartButton.addEventListener("click", (event) => {
+    event.stopPropagation();
+    let alreadyFavourite = favouritesList.includes(meal.title);
+    if(alreadyFavourite){
+      favouritesList = favouritesList.filter(title => title !== meal.title);
+      heartButton.textContent = "♡";
+    } else {
+      favouritesList.push(meal.title);
+      heartButton.textContent = "♥";
+    }
+  })
 
 }
 
@@ -151,48 +179,15 @@ document.addEventListener("DOMContentLoaded", () => {
     filterCards(document.getElementById("searchInput").value.toLowerCase());
   });
 
-  document.getElementById("sortSmall").addEventListener("click", () => {
-    if(filterIngredientsSize != 1){
-      filterIngredientsSize = 1;
-    } else {
-      filterIngredientsSize = 0;
-    }
-    updateButtons();
+  document.getElementById("prepFilter").addEventListener("change", function () {
+    filterIngredientsSize = parseInt(this.value);
     filterCards(document.getElementById("searchInput").value.toLowerCase());
-  });
-  
-  document.getElementById("sortMedium").addEventListener("click", () => {
-    if(filterIngredientsSize != 2){
-      filterIngredientsSize = 2;
-    } else {
-      filterIngredientsSize = 0;
-    }
-    updateButtons();
-    filterCards(document.getElementById("searchInput").value.toLowerCase());
-  });
-  
-  document.getElementById("sortLarge").addEventListener("click", () => {
-    if(filterIngredientsSize != 3){
-      filterIngredientsSize = 3;
-    } else {
-      filterIngredientsSize = 0;
-    }
-    updateButtons();
-    filterCards(document.getElementById("searchInput").value.toLowerCase());
-  });
-
-  document.getElementById("toggleFilter").addEventListener("click", () => {
-    const filterPanel = document.getElementById("filterPanel");
-    filterPanel.classList.toggle("hidden");
   });
 });
 
 function updateButtons(){
   let AZButton = document.getElementById("sortAlphaButton");
   let ZAButton = document.getElementById("sortReverseAlphaButton");
-  let smallButton = document.getElementById("sortSmall");
-  let mediumButton = document.getElementById("sortMedium");
-  let largeButton = document.getElementById("sortLarge");
 
   if(sortAlpha){
     AZButton.classList.add("on");
@@ -203,24 +198,6 @@ function updateButtons(){
   } else {
     AZButton.classList.remove("on");
     ZAButton.classList.remove("on");
-  }
-
-  if(filterIngredientsSize == 1){
-    smallButton.classList.add("on");
-    mediumButton.classList.remove("on");
-    largeButton.classList.remove("on");
-  } else if(filterIngredientsSize == 2){
-    mediumButton.classList.add("on");
-    smallButton.classList.remove("on");
-    largeButton.classList.remove("on");
-  } else if(filterIngredientsSize == 3){
-    largeButton.classList.add("on");
-    smallButton.classList.remove("on");
-    mediumButton.classList.remove("on");
-  } else {
-    smallButton.classList.remove("on");
-    mediumButton.classList.remove("on");
-    largeButton.classList.remove("on");
   }
 }
 
@@ -233,7 +210,7 @@ window.addEventListener("scroll", () => {
 });
 
 function getIngredientsSizing(meals) { //Runs once to get the numbers never used again
-  let sortedIngredientsLength = meals.map(meal => meal.estimatedCostUSD).sort((a, b) => a - b);
+  let sortedIngredientsLength = meals.map(meal => meal.estimatedCookTimeMins).sort((a, b) => a - b);
   let total =  sortedIngredientsLength.length;
 
   let smallIndex = Math.floor(total / 3);

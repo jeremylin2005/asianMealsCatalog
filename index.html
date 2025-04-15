@@ -21,10 +21,14 @@
           <button id="sortReverseAlphaButton">Z - A</button>
         </div>
 
-        <div class = "buttonManagerIngredients">
-          <button id="sortSmall">Light Prep</button>
-          <button id="sortMedium">Moderate Prep</button>
-          <button id="sortLarge">Advanced Prep</button>
+        <div class="dropdownPrepFilter">
+          <label for="prepFilter">Difficulty</label>
+          <select id="prepFilter">
+            <option value = "0">All</option>
+            <option value = "1">Easy</option>
+            <option value = "2">Medium</option>
+            <option value = "3">Hard</option>
+          </select>
         </div>
       </div>
 
@@ -33,7 +37,8 @@
         <div class = "cardOverlay">
           <span class = "badge difficulty">Easy</span>
           <span class = "badge price">$</span>
-          <button class="fav-button">♡</button>
+          <span class = "badge time">30 mins</span>
+          <button class = "favouriteButton">♡</button>
         </div>
         <div class="card-content">
           <img src=""/>
