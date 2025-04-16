@@ -188,13 +188,9 @@ function quoteAlert() {
   );
 }
 
-function removeLastCard() {
-  titles.pop(); // Remove last item in titles array
-  showCards(); // Call showCards again to refresh
-}
-
 document.addEventListener("DOMContentLoaded", () => {
   showCards();
+  showIngredientsPanel(meals[0]);
 
   document.getElementById("closeIngredientsPanel").addEventListener("click", () => {
     document.getElementById("ingredientsPanel").classList.add("hidden");
