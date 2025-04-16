@@ -257,7 +257,7 @@ body {
   width: 100%;
   text-align: center;
   font-family: 'Inter', serif;
-  padding-top: 70px; 
+  padding-top: 50px; 
   padding-bottom: 10px;
 }
 
@@ -330,6 +330,19 @@ body {
   color: white;
 }
 
+.deleteButton {
+  background: none;
+  color: #ff4d4d;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 10;
+  transition: transform 0.3s ease;
+}
+
+.deleteButton:hover {
+  transform: scale(1.2);
+}
+
 .favouriteButton {
   width: 35px;
   height: 35px;
@@ -341,13 +354,15 @@ body {
   padding: 5px 5px; 
   margin-left: auto;
   margin-right: 0;
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  transition: transform 0.3s ease, border-color 0.2s ease;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-
+.favouriteButton:hover{
+  transform: scale(1.2);
+}
 
 #ingredientsPanel {
   position: fixed;
@@ -459,6 +474,12 @@ button {
 
 #sortFavouritesButton:hover {
   background-color: #ffcdca;    
+}
+
+#sortFavouritesButton.on {
+  background-color: #ff6961;
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 #customMealPanel {

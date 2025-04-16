@@ -50,6 +50,8 @@ function createMealCard(displayCard, meal) {
   let difficultyLabel = displayCard.querySelector(".difficulty");
   difficultyLabel.classList.remove("easy", "medium", "hard");
 
+  let deleteButton = displayCard.querySelector(".deleteButton");
+
   if(meal.ingredients.length <= light){
     difficultyLabel.textContent = "Easy";
     difficultyLabel.classList.add("easy");
@@ -96,7 +98,20 @@ function createMealCard(displayCard, meal) {
       favouritesList.push(meal.title);
       heartButton.textContent = "♥";
     }
-  })
+  });
+
+  deleteButton.addEventListener("click", (event) => {
+    event.stopPropagation(); 
+    let index = meals.findIndex(i => i.title == meal.title);
+    if (index != -1) {
+      meals.splice(index, 1);
+      originalMeals.splice(index, 1);           
+      filteredMeals = [...originalMeals];     
+      currentPageNumber = 0;
+      document.getElementById("card-container").innerHTML = "";
+      showCards();                     
+    }
+  });
 
 }
 
@@ -332,6 +347,7 @@ function updateButtons(){
   let AZButton = document.getElementById("sortAlphaButton");
   let ZAButton = document.getElementById("sortReverseAlphaButton");
   let favouriteButton = document.getElementById("sortFavouritesButton");
+
 
   if(sortAlpha){
     AZButton.classList.add("on");
