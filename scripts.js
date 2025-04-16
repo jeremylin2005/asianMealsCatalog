@@ -292,6 +292,31 @@ document.addEventListener("DOMContentLoaded", () => {
     
     fileReader.readAsDataURL(imageInput.files[0]);
   });  
+
+  document.getElementById("openMealPlannerPanel").addEventListener("click", () => {
+    refreshSelectedMeals();
+    document.getElementById("mealPlannerPanel").classList.remove("hidden");
+  });
+  
+  document.getElementById("closeMealPlannerPanel").addEventListener("click", () => {
+    document.getElementById("mealPlannerPanel").classList.add("hidden");
+  });
+  
+  document.getElementById("saveMealPlan").addEventListener("click", () => {
+    let breakfast = document.getElementById("breakfastSelect").value;
+    let lunch = document.getElementById("lunchSelect").value;
+    let dinner = document.getElementById("dinnerSelect").value;
+  
+    let display = document.getElementById("plannedMealsDisplay");
+
+    display.innerHTML = `
+      <li><strong>Breakfast:</strong> ${breakfast}</li>
+      <li><strong>Lunch:</strong> ${lunch}</li>
+      <li><strong>Dinner:</strong> ${dinner}</li>`;
+
+    document.getElementById("plannedMealsList").style.display = "block";
+    document.getElementById("mealPlannerPanel").classList.add("hidden");
+  });
 });
 
 function updateButtons(){
@@ -360,4 +385,18 @@ function getIngredientsSizing(meals) { //Runs once to get the numbers never used
   console.log(`S: <= ${small} ingredients`);
   console.log(`M: ${small + 1} to ${medium} ingredients`);
   console.log(`L: >= ${medium + 1} ingredients`);
+}
+
+function refreshSelectedMeals() {
+  const selects = ["breakfastSelect", "lunchSelect", "dinnerSelect"];
+  selects.forEach(id => {
+    const select = document.getElementById(id);
+    select.innerHTML = "";
+    meals.forEach(meal => {
+      const option = document.createElement("option");
+      option.value = meal.title;
+      option.textContent = meal.title;
+      select.appendChild(option);
+    });
+  });
 }

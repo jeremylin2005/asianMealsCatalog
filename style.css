@@ -531,4 +531,107 @@ button {
   font-family: 'Inter', sans-serif;
 }
 
+#mealPlannerPanel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(250, 250, 250, 0.95);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+}
+
+#mealPlannerPanel.hidden {
+  display: none;
+}
+
+#mealPlannerPanel .customMealContent {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+#mealPlannerPanel h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#mealPlannerPanel label {
+  display: block;
+  margin: 10px 0 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+#mealPlannerPanel select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #888;
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  font-family: 'Inter', sans-serif;
+}
+
+#mealPlannerPanel .customMealButtons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+#mealPlannerPanel .customMealButtons button {
+  flex: 1;
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+}
+
+#saveMealPlan {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#closeMealPlannerPanel {
+  background-color: #ccc;
+}
+
+#plannedMealsList {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #333;
+}
+
+#openMealPlannerPanel {
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  background-color: white;
+  color: #2196F3;
+  border: 2px solid #2196F3; 
+  border-radius: 10px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#openMealPlannerPanel:hover {
+  background-color: #d2ebff; 
+}
 

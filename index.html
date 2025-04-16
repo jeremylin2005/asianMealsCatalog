@@ -26,6 +26,8 @@
           <button id="sortFavouritesButton">Favourites</button>
         </div>
 
+        <button id="openMealPlannerPanel">📅 Meal Planner</button>
+
         <div class = "dropdownAllergens">
           <label for="allergenInput">Allergies or Dislikes</label>
           <input type="text" id="allergenInput" placeholder="Hit enter after adding" />
@@ -60,6 +62,15 @@
             <option value = "2">Regular</option>
             <option value = "3">Long</option>
           </select>
+        </div>
+
+        <div id="plannedMealsList" style="margin-top: 30px; display: none">
+          <h3>Planned Meals for Today</h3>
+          <ul id="plannedMealsDisplay">
+            <li><strong>Breakfast:</strong> None</li>
+            <li><strong>Lunch:</strong> None</li>
+            <li><strong>Dinner:</strong> None</li>
+          </ul>
         </div>
 
       </div>
@@ -102,6 +113,25 @@
         </div>
       </div>
     </div>
+
+    <div id="mealPlannerPanel" class="hidden">
+      <div class="customMealContent">
+        <h2>Plan Your Day</h2>
     
+        <label for="breakfastSelect">Breakfast:</label>
+        <select id="breakfastSelect"></select>
+    
+        <label for="lunchSelect">Lunch:</label>
+        <select id="lunchSelect"></select>
+    
+        <label for="dinnerSelect">Dinner:</label>
+        <select id="dinnerSelect"></select>
+    
+        <div class="customMealButtons">
+          <button id="saveMealPlan">Save</button>
+          <button id="closeMealPlannerPanel">Back</button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
