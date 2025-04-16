@@ -1,8 +1,11 @@
 let currentPageNumber = 0;
 let filteredMeals = meals;
 let filterIngredientsSize = 0;
+let filterPrices = 0;
+let filterTime = 0;
 const originalMeals = [...meals];
 let favouritesList = [];
+let allergiesList = [];
 let sortAlpha = false;
 let sortReverseAlpha = false;
 let sortFavourites = false;
@@ -10,11 +13,11 @@ const maxPerPage = 20;
 let light = 11;
 let moderate = 12;
 let advanced = 15;
-let cheap = 8.41;
-let regular = 9.41;
-let expensive = 9;
-let quick = 33;
-let average = 34;
+let cheap = 8.36;
+let regular = 11.5;
+let expensive = 12.5;
+let quick = 35;
+let average = 36;
 let long = 46;
 
 getIngredientsSizing(meals);
@@ -59,9 +62,9 @@ function createMealCard(displayCard, meal) {
   }
 
   let priceLabel = displayCard.querySelector(".price");
-  if(meal.estimatedCostUSD <= cheap){
+  if(meal.estimatedCostUSD < cheap){
     priceLabel.textContent = "$";
-  } else if(meal.estimatedCostUSD > cheap && meal.estimatedCostUSD < expensive){
+  } else if(meal.estimatedCostUSD < expensive){
     priceLabel.textContent = "$$";
   } else {
     priceLabel.textContent = "$$$";  }
@@ -108,7 +111,7 @@ function filterCards(search) {
     filteredMeals = [...originalMeals];
   }
 
-  if(filterIngredientsSize != 0){ //PREP SIZE OR INGREDIENT SIZE
+  if(filterIngredientsSize != 0){ //SORT BY PREP SIZE OR INGREDIENT SIZE
     filteredMeals = filteredMeals.filter(meal => {
       if(filterIngredientsSize == 1) return meal.ingredients.length <= light;
       if(filterIngredientsSize == 2) return meal.ingredients.length >= moderate && meal.ingredients.length < advanced;
@@ -116,14 +119,38 @@ function filterCards(search) {
     })
   };
 
+  if(filterPrices != 0){ //SORT BY PRICE
+    filteredMeals = filteredMeals.filter(meal => {
+      if(filterPrices == 1) return meal.estimatedCostUSD <= cheap;
+      if(filterPrices == 2) return meal.estimatedCostUSD > cheap && meal.estimatedCostUSD <= regular;
+      if(filterPrices == 3) return meal.estimatedCostUSD >= expensive;
+    })
+  };
+
+  if(filterTime != 0){ //SORT BY TIME
+    filteredMeals = filteredMeals.filter(meal => {
+      if(filterTime == 1) return meal.estimatedCookTimeMins <= quick;
+      if(filterTime == 2) return meal.estimatedCookTimeMins >= average && meal.estimatedCookTimeMins < long;
+      if(filterTime == 3) return meal.estimatedCookTimeMins >= long;
+    })
+  }
+
   if(sortAlpha){ //ALPHABETICAL SORT
     filteredMeals.sort((x,y) => x.title.localeCompare(y.title));
   } else if (sortReverseAlpha){
     filteredMeals.sort((x,y) => y.title.localeCompare(x.title));
   }
 
-  if(sortFavourites){
+  if(sortFavourites){ //BY FAVOURITES
     filteredMeals = filteredMeals.filter(meal => favouritesList.includes(meal.title));
+  }
+
+  if (allergiesList.length > 0) { //FILTER ALLERGIES AND DISLIKES
+    filteredMeals = filteredMeals.filter(meal =>
+      !allergiesList.some(allergen =>
+        meal.ingredients.some(ingredient => ingredient.toLowerCase().includes(allergen))
+      )
+    );
   }
 
   window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
@@ -202,6 +229,28 @@ document.addEventListener("DOMContentLoaded", () => {
     filterIngredientsSize = parseInt(this.value);
     filterCards(document.getElementById("searchInput").value.toLowerCase());
   });
+
+  document.getElementById("priceFilter").addEventListener("change", function () {
+    filterPrices = parseInt(this.value);
+    filterCards(document.getElementById("searchInput").value.toLowerCase());
+  });
+
+  document.getElementById("timeFilter").addEventListener("change", function () {
+    filterTime = parseInt(this.value);
+    filterCards(document.getElementById("searchInput").value.toLowerCase());
+  });
+
+  document.getElementById("allergenInput").addEventListener("keypress", function (e) {
+    if (e.key === "Enter") {
+      let allergen = this.value.trim().toLowerCase();
+      if (allergen && !allergiesList.includes(allergen)) {
+        allergiesList.push(allergen);
+        this.value = "";
+        refreshAllergyList();
+        filterCards(document.getElementById("searchInput").value.toLowerCase());
+      }
+    }
+  });
 });
 
 function updateButtons(){
@@ -234,6 +283,27 @@ window.addEventListener("scroll", () => {
     showCards();
   }
 });
+
+function refreshAllergyList() {
+  let allergenSearchBar = document.getElementById("allergenSearchBar");
+  allergenSearchBar.innerHTML = "";
+  allergiesList.forEach((allergen, index) => {
+    let allergyItem  = document.createElement("div");
+    allergyItem.className = "allergyItem";
+    allergyItem.textContent = allergen;
+
+    let closeButton = document.createElement("span");
+    closeButton.textContent = "×";
+    closeButton.onclick = () => {
+      allergiesList.splice(index, 1);
+      refreshAllergyList()
+      filterCards(document.getElementById("searchInput").value.toLowerCase());
+    };
+
+    allergyItem.appendChild(closeButton);
+    allergenSearchBar.appendChild(allergyItem);
+  });
+}
 
 function getIngredientsSizing(meals) { //Runs once to get the numbers never used again
   let sortedIngredientsLength = meals.map(meal => meal.estimatedCookTimeMins).sort((a, b) => a - b);

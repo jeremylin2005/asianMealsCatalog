@@ -104,6 +104,57 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+.dropdownAllergens {
+  font-weight: bold;
+  display: block;
+  margin-top: 15px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+}
+
+#allergenInput {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid rgb(100, 98, 98);
+  border-radius: 10px;
+  background-color: white;
+  color: rgb(34, 33, 33);
+  font-family: inherit;
+  margin-bottom: 10px;
+}
+
+.allergenSearchBar {
+  display: inline-flex;
+  align-items: center;
+  background-color: #ff6961;
+  color: white;
+  border-radius: 20px;
+  padding: 6px 10px;
+  margin: 5px 5px 0 0;
+  font-size: 0.9rem;
+}
+
+.dropdownAllergens label {
+  font-weight: bold;
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+}
+
+.allergyItem span {
+  cursor: pointer;
+  margin-left: 12px;
+  font-weight: bold;
+}
+
+
+.allergyItem span:hover {
+  color: red;
+}
+
 .dropdownPrepFilter {
   margin-top: 15px;
   font-family: 'Inter', sans-serif;
@@ -122,6 +173,54 @@ body {
 }
 
 .dropdownPrepFilter label {
+  font-weight: bold;         
+  display: block;            
+  margin-top: 15px;
+  margin-bottom: 15px;          
+}
+
+.dropdownPriceFilter {
+  margin-top: 15px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+}
+
+.dropdownPriceFilter select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid rgb(100, 98, 98);
+  border-radius: 10px;
+  background-color: white;
+  color: rgb(34, 33, 33);
+  font-family: inherit;
+}
+
+.dropdownPriceFilter label {
+  font-weight: bold;         
+  display: block;            
+  margin-top: 15px;
+  margin-bottom: 15px;          
+}
+
+.dropdownTimeFilter {
+  margin-top: 15px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+}
+
+.dropdownTimeFilter select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid rgb(100, 98, 98);
+  border-radius: 10px;
+  background-color: white;
+  color: rgb(34, 33, 33);
+  font-family: inherit;
+}
+
+.dropdownTimeFilter label {
   font-weight: bold;         
   display: block;            
   margin-top: 15px;

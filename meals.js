@@ -70,7 +70,7 @@ const meals = [
     image: "images/tteokbokki.jpg"
   },
   {
-    "title": "Dad's Cashew Shrimp",
+    "title": "Cashew Shrimp",
     "ingredients": [
       "12 oz shrimp (peeled and deveined)",
       "3 oz snow pea (destringed)",
@@ -181,7 +181,7 @@ const meals = [
     "estimatedCostUSD": 11.00
   },
   {
-    "title": "Dad's Chicken Congee",
+    "title": "Chicken Congee",
     "ingredients": [
       "1 rice cup white rice",
       "8 cups water",
@@ -213,7 +213,7 @@ const meals = [
     "estimatedCostUSD": 7.50
   },
   {
-    title: "Egg Fried Rice (蛋炒飯)",
+    title: "Egg Fried Rice",
     ingredients: [
       "14 oz uncooked jasmine rice",
       "14 oz water (for cooking rice)",
@@ -423,7 +423,7 @@ const meals = [
       "In a large bowl, toss the kale with the olive oil and fine sea salt to taste. Add the tofu and toss. Some of the kale will wilt, which is what you want. Serve hot, topped with sliced scallions and cilantro leaves, and with the reserved chile marinade alongside for drizzling."
     ],
     "image": "images/chile-and-ginger-fried-tofu-salad-with-kale-melissa-clark-dinner.jpg",
-    "estimatedCookTimeMins": 56,
+    "estimatedCookTimeMins": 55,
     "estimatedCostUSD": 5.44
   },
   {
@@ -608,7 +608,7 @@ const meals = [
       "Remove from oil, shake off excess, drip dry on a rack. Plate and top with spicy aioli and more aioli on the side to dip."
     ],
     "image": "images/crispy-tofu-balls.jpg",
-    "estimatedCookTimeMins": 48,
+    "estimatedCookTimeMins": 50,
     "estimatedCostUSD": 10.93
   },
   {
@@ -628,7 +628,7 @@ const meals = [
       "Carefully cut the tofu into 2 wide slabs (or 4 smaller ones) and place on plates or in shallow bowls. Divide the warm tomatoes on top. Add a judicious drizzle of toasted sesame oil, then sprinkle with scallions and basil, if using. Serve immediately."
     ],
     "image": "images/silken-tofu-with-soy-sauced-tomatoes.jpg",
-    "estimatedCookTimeMins": 37,
+    "estimatedCookTimeMins": 40,
     "estimatedCostUSD": 13.21
   },
   {
@@ -643,7 +643,7 @@ const meals = [
       "Arrange broccoli on a platter and drizzle sauce over."
     ],
     "image": "images/chinese-broccoli-with-soy-paste.jpg",
-    "estimatedCookTimeMins": 33,
+    "estimatedCookTimeMins": 35,
     "estimatedCostUSD": 11.16
   },
   {
@@ -669,7 +669,7 @@ const meals = [
       "Transfer fried rice to a large bowl or platter. Drain salted tomatoes, drizzle with olive oil, and spoon over rice. Sprinkle with reserved scallion tops and red pepper flakes (if using) and drizzle with remaining sesame oil. Finely grate zest from lemon over."
     ],
     "image": "images/tomato-fried-rice.jpg",
-    "estimatedCookTimeMins": 44,
+    "estimatedCookTimeMins": 45,
     "estimatedCostUSD": 10.08
   },
   {
@@ -702,7 +702,7 @@ const meals = [
       "Heat the oil in a large saute\u0301 pan over medium-high heat. Add the meatballs and brown on all sides, about 5 minutes. Transfer to a plate. (If you rolled only half the mixture into meatballs, now saute\u0301 the ground pork in the pan until cooked through, then transfer to the plate.) Add the green onions and saute\u0301 until browned, about 2 minutes. Add the rice and saute\u0301 until warmed through and softened, then continue saute\u0301ing until the rice seems firm again, about 3 minutes. Add the meatballs and cook until warmed through. In a small bowl, combine the soy sauce, fish sauce, and sriracha. Drizzle the mixture over the rice and stir until evenly coated."
     ],
     "image": "images/vietnamese-pork-meatball-banh-mi-fried-rice.jpg",
-    "estimatedCookTimeMins": 21,
+    "estimatedCookTimeMins": 25,
     "estimatedCostUSD": 9.52
   },
   {
@@ -791,7 +791,7 @@ const meals = [
       "Stir yogurt and garlic in a small bowl; season with salt. Assemble by dividing yogurt among pitas, followed by tofu, cucumbers, drained pickled onion, and a handful of mint."
     ],
     "image": "images/shawarma-spiced-tofu-pita-wraps.jpg",
-    "estimatedCookTimeMins": 32,
+    "estimatedCookTimeMins": 35,
     "estimatedCostUSD": 8.46
   },
   {
@@ -816,7 +816,7 @@ const meals = [
       "While folding the rice mixture quickly, fold in the egg (don\u2019t let it sit still or the egg will pool and form ugly clumps). Remove the pan from the heat, add the scallion greens, and toss. Taste and adjust the seasoning with more salt or soy sauce as desired and serve."
     ],
     "image": "images/barbecued-pork-fried-rice-with-mushrooms-and-extra-ginger.jpg",
-    "estimatedCookTimeMins": 33,
+    "estimatedCookTimeMins": 35,
     "estimatedCostUSD": 7.28
   },
   {
@@ -839,7 +839,7 @@ const meals = [
       "Combine the soy sauce, lemon juice, arrowroot, and 1/4 cup water to make a slurry and whisk with a fork until no lumps remain. Pour the slurry into the saut\u00e9 pan and cook, stirring constantly, until the sauce thickens, about 3 minutes. Add the tofu and cook for 5 to 7 minutes, until the sauce coats the tofu and beans. Stir in the scallions and cilantro. Serve warm."
     ],
     "image": "images/manchurian-green-beans-with-tofu.jpg",
-    "estimatedCookTimeMins": 39,
+    "estimatedCookTimeMins": 40,
     "estimatedCostUSD": 11.5
   },
   {
@@ -859,7 +859,7 @@ const meals = [
       "Season the rice with salt and serve right away or at room temperature, with the eggs, if desired."
     ],
     "image": "images/garlic-fried-rice-sinangag.jpg",
-    "estimatedCookTimeMins": 48,
+    "estimatedCookTimeMins": 50,
     "estimatedCostUSD": 6.34
   },
   {
@@ -890,7 +890,7 @@ const meals = [
       "When the noodles have completely absorbed the liquid and are chewable, stir in the celery, bell pepper, and adobo mixture. Season with the black pepper and mix thoroughly. Pour in the remaining 1 tablespoon oil. Reduce the heat to low to gently fry the noodles for about 2 minutes. Serve with an extra dash of soy sauce and calamansi juice, if using."
     ],
     "image": "images/stir-fried-rice-noodles-with-shrimp-and-adobo-pansit-bihon-guisado.jpg",
-    "estimatedCookTimeMins": 24,
+    "estimatedCookTimeMins": 25,
     "estimatedCostUSD": 8.17
   },
   {
@@ -915,7 +915,7 @@ const meals = [
       "Pour in the soy sauce and cook, stirring occasionally, until it begins to evaporate, about 2 minutes. Add half the green onions and stir-fry for another 3 minutes, or until thoroughly heated. Sprinkle in the turmeric. Add the cooked rice or grains and saut\u00e9 until warmed through. Add the tofu and warm through. Add the finely chopped kale or broccoli rabe and stir to coat and quickly warm through. Top with the remaining green onions, sprinkle with some gomashio, if desired, and serve immediately."
     ],
     "image": "images/turmeric-kale-fried-rice.jpg",
-    "estimatedCookTimeMins": 54,
+    "estimatedCookTimeMins": 55,
     "estimatedCostUSD": 14.49
   },
   {
@@ -973,7 +973,7 @@ const meals = [
       "Dashi can be made 3 days ahead. Let cool; cover and chill, or freeze up to 3 months."
     ],
     "image": "images/crispy-tofu-in-shiitake-broth.jpg",
-    "estimatedCookTimeMins": 54,
+    "estimatedCookTimeMins": 55,
     "estimatedCostUSD": 12.02
   },
   {
@@ -998,7 +998,7 @@ const meals = [
       "Instead of baking, cook these tofu slices on a grill. About 5 minutes per side should do\u2014make sure there are nice grill marks on each side."
     ],
     "image": "images/homemade-baked-tofu.jpg",
-    "estimatedCookTimeMins": 26,
+    "estimatedCookTimeMins": 30,
     "estimatedCostUSD": 5.91
   },
   {
@@ -1025,7 +1025,7 @@ const meals = [
       "Remove soba noodles from water and place in a large bowl. Toss with the 1 tablespoon soy sauce to separate the noodles. Pour the vegetable mixture over the noodles and toss well to mix. Serve warm or at room temperature, with Sriracha hot sauce as a condiment, if desired, for more heat."
     ],
     "image": "images/asian-vegetable-noodle-toss.jpg",
-    "estimatedCookTimeMins": 22,
+    "estimatedCookTimeMins": 25,
     "estimatedCostUSD": 12.72
   },
   {
@@ -1061,7 +1061,7 @@ const meals = [
       "Divide kare-kare among bowls; top with peanuts and red chile. Serve with shrimp paste."
     ],
     "image": "images/kare-kare-with-beans-baby-bok-choy-and-eggplant.jpg",
-    "estimatedCookTimeMins": 37,
+    "estimatedCookTimeMins": 40,
     "estimatedCostUSD": 8.23
   },
   {
@@ -1091,7 +1091,7 @@ const meals = [
       "Mushrooms can be pickled 5 days ahead. Keep chilled."
     ],
     "image": "images/spicy-tofu-with-pickled-shiitake-mushrooms.jpg",
-    "estimatedCookTimeMins": 27,
+    "estimatedCookTimeMins": 30,
     "estimatedCostUSD": 13.59
   },
   {
@@ -1121,7 +1121,7 @@ const meals = [
       "Divide the fried rice among 4 small bowls and firmly press down on the rice to pack it into the bowls. Overturn the bowls onto 4 large shallow bowls. Remove the bowls to reveal the mounds of rice and pour the sauce over each one. Top with the scallions and serve."
     ],
     "image": "images/japanese-style-fried-rice-chahan.jpg",
-    "estimatedCookTimeMins": 41,
+    "estimatedCookTimeMins": 45,
     "estimatedCostUSD": 10.35
   },
   {
@@ -1145,7 +1145,7 @@ const meals = [
       "Rice can be cooked (but not fried) 3 days ahead. Let cool; cover and chill."
     ],
     "image": "images/stuffing-fried-rice.jpg",
-    "estimatedCookTimeMins": 51,
+    "estimatedCookTimeMins": 55,
     "estimatedCostUSD": 13.11
   },
   {
@@ -1196,7 +1196,7 @@ const meals = [
       "Divide congee among bowls. Top with crispy mushrooms and cilantro and drizzle with chili oil."
     ],
     "image": "images/turkey-congee-with-crispy-shiitake-mushrooms.jpg",
-    "estimatedCookTimeMins": 47,
+    "estimatedCookTimeMins": 50,
     "estimatedCostUSD": 11.36
   },
   {
@@ -1227,7 +1227,7 @@ const meals = [
       "Meanwhile, using a mandoline or the large holes on a box grater, coarsely grate carrot and zucchini until you have 1 1/2 cups each. Divide noodles, bok choy, carrot, and zucchini among bowls. Top evenly with soup, eggs, if using, basil, and remaining scallions. Serve with additional sesame oil and Sriracha for drizzling alongside."
     ],
     "image": "images/quick-pork-ramen-with-carrots-zucchini-and-bok-choy.jpg",
-    "estimatedCookTimeMins": 28,
+    "estimatedCookTimeMins": 30,
     "estimatedCostUSD": 13.47
   },
   {
@@ -1261,11 +1261,11 @@ const meals = [
       "Divide stew among bowls. Slice eggs in half lengthwise and top each bowl with 2 halves. Sprinkle with scallions. Serve udon in large bowl for sharing alongside."
     ],
     "image": "images/sumo-stew-chanko-nabe-with-shrimp-meatballs-and-bok-choy.jpg",
-    "estimatedCookTimeMins": 31,
+    "estimatedCookTimeMins": 35,
     "estimatedCostUSD": 14.87
   },
   {
-    "title": "Dad's Cantonese Crispy Pork Belly",
+    "title": "Cantonese Crispy Pork Belly",
     "ingredients": [
       "1.6 lb pork belly",
       "1 tbsp salt",
@@ -1335,7 +1335,7 @@ const meals = [
       "Toss noodles, escarole, and chili sauce in a large bowl until coated; season with salt. Divide noodles between bowls. Slice scallions into 1\" pieces and place on top of noodles along with some tofu crumbles, radishes, and peanuts."
     ],
     "image": "images/ramen-noodle-bowl-with-escarole-and-spicy-tofu-crumbles.jpg",
-    "estimatedCookTimeMins": 59,
+    "estimatedCookTimeMins": 60,
     "estimatedCostUSD": 6.21
   },
   {
@@ -1382,7 +1382,7 @@ const meals = [
       "Blend soy milk, cashews, vinegar, raisins, and mustard in a food processor or high-powered blender. Add desired amount to chopped vegetables."
     ],
     "image": "images/apple-bok-choy-salad-56389418.jpg",
-    "estimatedCookTimeMins": 54,
+    "estimatedCookTimeMins": 55,
     "estimatedCostUSD": 6.25
   },
   {
@@ -1436,7 +1436,7 @@ const meals = [
       "Add remaining tablespoon oil to skillet and sear sausages on all sides until golden brown, 3 to 5 minutes per side. Add toasted caraway seeds, sauerkraut, and broth. Bring to a simmer, reduce heat to medium, cover the skillet, and simmer until sausages are cooked through (150\u00b0F for pork sausages, 160\u00b0F for poultry sausages), about 10 minutes. Remove cover and fold in reserved bok choy, apples, vinegar, and butter. Cook, tossing, until some of the liquid has evaporated and the bok choy and apples are warm, 3 to 5 minutes. Taste and adjust seasoning. Serve with mustard for dipping."
     ],
     "image": "images/sausage-with-sauerkraut-apples-and-bok-choy-51254430.jpg",
-    "estimatedCookTimeMins": 51,
+    "estimatedCookTimeMins": 50,
     "estimatedCostUSD": 6.94
   },
   {
@@ -1457,7 +1457,7 @@ const meals = [
       "In a large bowl, whisk together the oils, vinegar, white pepper, and peppercorns; season with salt. Working over the bowl, separate the Brussels sprout leaves and add them to the dressing. You may need to trim the core more as you get to the center of the sprouts. Add the celery and chile to the bowl and toss to combine. Let the salad sit about 15 minutes. Add cilantro and taste and adjust seasoning before serving."
     ],
     "image": "images/brussels-sprouts-salad-with-szechuan-peppercorn-and-celery-51253020.jpg",
-    "estimatedCookTimeMins": 54,
+    "estimatedCookTimeMins": 55,
     "estimatedCostUSD": 8.11
   },
   {
@@ -1532,7 +1532,7 @@ const meals = [
       "The leftover miso mayo can be refrigerated for up to a week."
     ],
     "image": "images/sweet-potato-tempura-and-steak-sandwich-with-bok-choy-and-miso-mayo-51234910.jpg",
-    "estimatedCookTimeMins": 52,
+    "estimatedCookTimeMins": 55,
     "estimatedCostUSD": 10.69
   },
   {
@@ -1584,7 +1584,7 @@ const meals = [
       "7. Serve each roll wrapped in a lettuce leaf garnished with nuts, and accompanied by the Lime-Soy-Ginger Sauce."
     ],
     "image": "images/crispy-spring-rolls-with-spicy-tofu-vegetables-and-toasted-nuts-51219810.jpg",
-    "estimatedCookTimeMins": 34,
+    "estimatedCookTimeMins": 35,
     "estimatedCostUSD": 5.27
   },
   {
@@ -1621,7 +1621,7 @@ const meals = [
       "Cut each Poached Pear with Pomegranate in half crosswise and remove the cores from the bottom halves. Place each pear bottom standing up on a plate and top with a slice of Cabrales cheese. Replace the pear tops. Glaze the pears with some of the Pomegranate Sauce, letting some of the sauce drip onto the plates. Place a Baked Almond Diamond on each plate and top with a scoop of Szechuan Pepper Ice Cream."
     ],
     "image": "images/poached-seckel-pear-with-pomegranate-cabrales-cheese-and-szechuan-pepper-ice-cream-51202610.jpg",
-    "estimatedCookTimeMins": 52,
+    "estimatedCookTimeMins": 55,
     "estimatedCostUSD": 13.53
   },
   {
@@ -1648,7 +1648,7 @@ const meals = [
     "estimatedCostUSD": 14.34
   },
   {
-    "title": "Dad's Broccoli Stir Fry",
+    "title": "Broccoli Stir Fry",
     "ingredients": [
       "1 lb broccoli (about 2 heads)",
       "1 oz garlic (4–5 cloves)",
@@ -1697,7 +1697,7 @@ const meals = [
       "2. Divide the fried rice between two or three thermoses."
     ],
     "image": "images/teriyaki-fried-rice-51188810.jpg",
-    "estimatedCookTimeMins": 26,
+    "estimatedCookTimeMins": 30,
     "estimatedCostUSD": 14.03
   },
   {
@@ -1725,7 +1725,7 @@ const meals = [
       "Thinly slice the eggs. Top the rice mixture with the eggs and scallions and serve."
     ],
     "image": "images/edamame-fried-rice-51186610.jpg",
-    "estimatedCookTimeMins": 58,
+    "estimatedCookTimeMins": 60,
     "estimatedCostUSD": 8.29
   },
   {
@@ -1765,7 +1765,7 @@ const meals = [
       "3. Heat a wok or large skillet over medium-high heat until a bead of water sizzles and evaporates on contact. Add the peanut oil and swirl to coat the bottom and sides. Add the garlic and ginger and stir-fry until aromatic, 20 to 30 seconds. Add the bok choy and stir-fry for about 2 minutes, until crisp-tender. Add the soy sauce mixture and cook for another 30 seconds. Turn off the heat, and drizzle with sesame oil. Transfer to a serving plate and serve hot."
     ],
     "image": "images/stir-fried-sesame-baby-bok-choy-51180000.jpg",
-    "estimatedCookTimeMins": 28,
+    "estimatedCookTimeMins": 30,
     "estimatedCostUSD": 10.48
   },
   {
@@ -1830,7 +1830,7 @@ const meals = [
       "Add edamame, peas, soy sauce, vinegar, sesame oil, and cooked shrimp. Cook, tossing constantly, until shrimp and vegetables are heated through, about 1 minute. Top with scallion greens."
     ],
     "image": "images/shrimp-fried-rice-51149040.jpg",
-    "estimatedCookTimeMins": 32,
+    "estimatedCookTimeMins": 35,
     "estimatedCostUSD": 11.91
   },
   {
@@ -1854,7 +1854,7 @@ const meals = [
       "Cook pasta as directed on package with 2 teaspoons salt until just tender. Drain and rinse pasta with cool water. In a large nonstick skillet, heat canola oil over medium-high heat. Cook shallot and ginger, stirring, until just brown, 1 minute. Add bok choy stems, bell pepper and remaining 1/4 teaspoon salt. Cook, stirring frequently, until peppers are crisp-tender, 1 to 2 minutes. Transfer contents of skillet to a plate. To same skillet, add bok choy leaves, stock, soy sauce, sesame oil and vinegar. Cook, stirring, until leaves are soft and bright green, 1 to 2 minutes. Add bell pepper mixture, pasta, peanuts and pepper flakes to pan. Toss to combine; serve."
     ],
     "image": "images/hot-and-sour-peanutty-noodles-with-bok-choy-395096.jpg",
-    "estimatedCookTimeMins": 44,
+    "estimatedCookTimeMins": 45,
     "estimatedCostUSD": 8.68
   },
   {
@@ -1880,7 +1880,7 @@ const meals = [
       "2. Heat a 14-inch flat-bottomed wok or 12-inch skillet over high heat until a bead of water vaporizes within 1 to 2 seconds of contact. Swirl in the oil, add the garlic and ginger, then, using a metal spatula, stir-fry 10 seconds or until the aromatics are fragrant. Push the aromatics to the sides of the wok, carefully add the shrimp and spread them evenly in one layer in the wok. Cook undisturbed 1 minute, letting the shrimp begin to sear. Sprinkle on the salt and stir-fry 30 seconds or until the shrimp begin to turn orange. Add the tomatoes, bell peppers, and onions and stir-fry 1 minute or until the shrimp have turned almost totally orange. Swirl the ketchup mixture into the wok and stir-fry 1 minute or until the shrimp are just cooked through and the sauce coats the shrimp. Stir in the cilantro."
     ],
     "image": "images/chinese-trinidadian-stir-fried-shrimp-with-rum-388610.jpg",
-    "estimatedCookTimeMins": 37,
+    "estimatedCookTimeMins": 40,
     "estimatedCostUSD": 14.74
   },
   {
@@ -1912,7 +1912,7 @@ const meals = [
     "estimatedCostUSD": 6.33
   },
   {
-    "title": "Dad's Smashed Cucumber Salad",
+    "title": "Smashed Cucumber Salad",
     "ingredients": [
       "20 oz cucumber",
       "2 oz red bell pepper",
@@ -1968,7 +1968,7 @@ const meals = [
       "Add the tofu to warm it up in the sauce for about a minute. Finally, stir in the green onions. Serve hot, with steamed rice."
     ],
     "image": "images/black-pepper-tofu-365129.jpg",
-    "estimatedCookTimeMins": 42,
+    "estimatedCookTimeMins": 45,
     "estimatedCostUSD": 9.79
   },
   {
@@ -2005,7 +2005,7 @@ const meals = [
       "Meanwhile, in a small saucepan, combine the soy sauce, orange juice, mirin, and ginger. Bring to a boil and reduce the heat to low. Simmer just until reduced by half, 30 to 40 minutes. In a small dish, mix the cornstarch and 1 teaspoon water and stir this slurry into the simmering sauce. Simmer 30 seconds and remove the pan from the heat."
     ],
     "image": "images/teriyaki-black-cod-with-sticky-rice-cakes-and-seared-baby-bok-choy-363330.jpg",
-    "estimatedCookTimeMins": 37,
+    "estimatedCookTimeMins": 40,
     "estimatedCostUSD": 9.52
   },
   {
@@ -2030,7 +2030,7 @@ const meals = [
       "Wipe out any peanut oil from skillet. Add 2 teaspoons sesame oil and place skillet over medium heat. Add green onions, ginger, and garlic. Stir until fragrant, about 30 seconds. Add remaining 1 1/2 tablespoons soy sauce and 3 teaspoons vinegar, then bok choy. Toss until bok choy wilts, 1 to 2 minutes. Add mizuna in 2 batches, tossing to wilt before adding more, 1 to 2 minutes per batch. Season greens with salt and pepper. Add tofu to skillet. Toss gently to blend. Transfer to platter."
     ],
     "image": "images/stir-fried-bok-choy-and-mizuna-with-tofu-362936.jpg",
-    "estimatedCookTimeMins": 43,
+    "estimatedCookTimeMins": 45,
     "estimatedCostUSD": 10.43
   },
   {
@@ -2054,7 +2054,7 @@ const meals = [
       "Arrange remaining 4 chicken breasts and vegetables on platter. Serve with remaining dressing."
     ],
     "image": "images/grilled-asian-chicken-with-bok-choy-shiitake-mushrooms-and-radishes-359329.jpg",
-    "estimatedCookTimeMins": 38,
+    "estimatedCookTimeMins": 40,
     "estimatedCostUSD": 13.52
   },
   {
@@ -2078,7 +2078,7 @@ const meals = [
       "3. Put the remaining 3 tablespoons oil in the skillet; heat until shimmering. Add the rice; stir-fry, breaking up clumps, until heated through, about 2 minutes. Add the egg; stir until scrambled, about 1 minute. Return the meat/vegetable mixture, along with the remaining 3 tablespoons of soy sauce and the scallions, to the pan and stir to combine. Serve immediately."
     ],
     "image": "images/simple-fried-rice-358301.jpg",
-    "estimatedCookTimeMins": 29,
+    "estimatedCookTimeMins": 30,
     "estimatedCostUSD": 13.68
   },
   {
@@ -2132,7 +2132,7 @@ const meals = [
       "Once your oil is hot, dip a teaspoon in the hot oil, then into the batter and scoop out a heaping teaspoonful. Hold the spoon close to the oil and let the batter roll off and into the oil. Repeat with the remaining batter; using a slotted spoon, turn and baste the fritters occasionally, allowing them to become golden brown on all sides. (Fry the fritters in two batches if your pot becomes overcrowded.) If the temperature of the oil dips below 350\u00b0F, increase the heat to medium-high. Once the fritters are golden brown, transfer them to the prepared plate to cool slightly. Serve on a small plate drizzled with lots of cane syrup."
     ],
     "image": "images/calas-fried-rice-fritters-356809.jpg",
-    "estimatedCookTimeMins": 48,
+    "estimatedCookTimeMins": 50,
     "estimatedCostUSD": 11.91
   },
   {
@@ -2152,7 +2152,7 @@ const meals = [
       "Preheat oven to 425\u00b0F. Form bed of bok choy in center of each of two 12-inch square pieces of foil. Top bok choy with fish. Mix orange juice, green onion, hoisin, ginger, and orange peel in small bowl. Spoon mixture over fish, dividing equally. Sprinkle with salt and coriander. Top with cilantro. Fold up foil sides and pinch tightly to seal above fish and at both ends of packets, enclosing contents completely. Place packets on baking sheet. Bake until fish is just opaque in center, 12 to 14 minutes. Transfer packets to plates and serve."
     ],
     "image": "images/salmon-with-hoisin-orange-and-bok-choy-356309.jpg",
-    "estimatedCookTimeMins": 47,
+    "estimatedCookTimeMins": 50,
     "estimatedCostUSD": 11.2
   },
   {
@@ -2201,7 +2201,7 @@ const meals = [
       "** Fresh Chinese egg noodles are available in the refrigerated section of Asian markets."
     ],
     "image": "images/chinese-egg-noodles-with-smoked-duck-and-snow-peas-354302.jpg",
-    "estimatedCookTimeMins": 24,
+    "estimatedCookTimeMins": 25,
     "estimatedCostUSD": 12.82
   },
   {
@@ -2248,7 +2248,7 @@ const meals = [
       "Heat remaining 2 tablespoons oil in a 12-inch nonstick skillet over medium heat. Meanwhile, lightly beat remaining 2 eggs in a medium bowl. Pat tofu dry and season both sides with 1/2 teaspoon salt (total). Coat tofu with egg, letting excess drip off, then fry, turning once, until golden and heated through, 8 to 10 minutes. Drain briefly on paper towels, then serve with salad and reserved dressing.\u25ca"
     ],
     "image": "images/panfried-tofu-with-romano-bean-and-herb-salad-354152.jpg",
-    "estimatedCookTimeMins": 33,
+    "estimatedCookTimeMins": 35,
     "estimatedCostUSD": 13.19
   },
   {
@@ -2269,7 +2269,7 @@ const meals = [
       "Arrange tofu on a foil-lined broiler pan, cut sides up, and broil about 2 inches from heat until a crust just forms, 1 to 2 minutes. Remove from oven and spread crusted side of each square with about 3/4 teaspoon miso mixture. Broil until tops are just bubbling and starting to color, 1 to 2 minutes. Transfer to a plate. Skewer each square with 1 two-pronged pick or 2 parallel straight picks. Sprinkle with seeds."
     ],
     "image": "images/broiled-tofu-with-miso-em-tofu-dengaku-em-353652.jpg",
-    "estimatedCookTimeMins": 47,
+    "estimatedCookTimeMins": 50,
     "estimatedCostUSD": 13.59
   },
   {
@@ -2294,7 +2294,7 @@ const meals = [
       "Stack tofu and vegetables on plates. Garnish with mint sprigs and serve"
     ],
     "image": "images/grilled-veggie-and-tofu-stack-with-balsamic-and-mint-353313.jpg",
-    "estimatedCookTimeMins": 43,
+    "estimatedCookTimeMins": 45,
     "estimatedCostUSD": 12.37
   },
   {
@@ -2325,7 +2325,7 @@ const meals = [
       "Stir together hoisin sauce, peanut butter, water, and reserved 2 tablespoons pickling liquid. Serve rolls with dipping sauce."
     ],
     "image": "images/summer-rolls-with-baked-tofu-and-sweet-and-savory-dipping-sauce-352777.jpg",
-    "estimatedCookTimeMins": 54,
+    "estimatedCookTimeMins": 55,
     "estimatedCostUSD": 8.58
   },
   {
@@ -2346,7 +2346,7 @@ const meals = [
       "Just before serving, carefully lift tofu from saucepan with a large spatula and drain on paper towels. Gently pat dry, then transfer to a small plate. Spoon some sauce over tofu and serve warm. Serve remaining sauce on the side."
     ],
     "image": "images/warm-tofu-with-spicy-garlic-sauce-351871.jpg",
-    "estimatedCookTimeMins": 34,
+    "estimatedCookTimeMins": 35,
     "estimatedCostUSD": 7.41
   },
   {
@@ -2374,7 +2374,7 @@ const meals = [
       "Place tofu in a colander; set a heavy pot on top 10 to 15 minutes to press out moisture. Halve; sprinkle soy sauce, garlic powder, then flour over halves. Heat 1 tablespoon oil over medium-high heat in a large skillet. Cook tofu until golden, 2 to 3 minutes per side. Slice; set aside. In same skillet, cook peppers and onions, covered, until peppers soften, 7 to 8 minutes. Cook noodles as directed on package. Whisk miso paste, garlic, ginger, zest, juice and remaining 1 tablespoon oil in a bowl. Add pepper mixture, noodles, corn, water chestnuts; toss. Top with tofu."
     ],
     "image": "images/tofu-stir-fry-351409.jpg",
-    "estimatedCookTimeMins": 21,
+    "estimatedCookTimeMins": 25,
     "estimatedCostUSD": 7.78
   },
   {
@@ -2417,7 +2417,7 @@ const meals = [
       "Remove from heat and let stand, covered, 10 minutes. Fluff with a fork."
     ],
     "image": "images/chinese-black-rice-243608.jpg",
-    "estimatedCookTimeMins": 37,
+    "estimatedCookTimeMins": 40,
     "estimatedCostUSD": 7.82
   },
   {
@@ -2441,7 +2441,7 @@ const meals = [
       "In wok or heavy large saut\u00e9 pan over moderately high heat, heat oil until hot but not smoking. Add half of scallions (reserve remainder for garnish). Add shrimp and stir-fry until shrimp are pink and cooked through, 2 to 3 minutes. Add eggs and rice and stir-fry until eggs are just set, about 1 minute. Add mushrooms, peas, ham, oyster sauce, sugar, salt, and pepper and stir-fry until heated through and fluffy, 4 to 5 minutes. Garnish with remaining scallions and serve."
     ],
     "image": "images/yangzhou-fried-rice-243064.jpg",
-    "estimatedCookTimeMins": 29,
+    "estimatedCookTimeMins": 30,
     "estimatedCostUSD": 10.04
   },
   {
@@ -2477,7 +2477,7 @@ const meals = [
       "Transfer to serving dish. Sprinkle with Sichuan peppercorn powder and cilantro, if using. Serve immediately."
     ],
     "image": "images/ma-po-tofu-spicy-bean-curd-with-beef-243066.jpg",
-    "estimatedCookTimeMins": 27,
+    "estimatedCookTimeMins": 30,
     "estimatedCostUSD": 12.47
   },
   {
@@ -2584,7 +2584,7 @@ const meals = [
       "Whisk sauce, then pour 1 1/2 cups sauce into a large bowl. Add noodles, sugar snaps, spinach, and half of scallions and toss. Serve in shallow bowls, topped with tofu, remaining scallions, and ginger. Drizzle with some of remaining sauce and serve remainder on the side."
     ],
     "image": "images/chilled-soba-with-tofu-and-sugar-snap-peas-242834.jpg",
-    "estimatedCookTimeMins": 44,
+    "estimatedCookTimeMins": 45,
     "estimatedCostUSD": 10.53
   },
   {
@@ -2608,7 +2608,7 @@ const meals = [
       "*Available in the Asian foods section of many supermarkets and at Asian markets."
     ],
     "image": "images/grilled-shrimp-satay-with-peaches-and-bok-choy-242685.jpg",
-    "estimatedCookTimeMins": 41,
+    "estimatedCookTimeMins": 45,
     "estimatedCostUSD": 8.36
   },
   {
@@ -2638,7 +2638,7 @@ const meals = [
       "Lightly brush bok choy with oil and grill, covered only if using a gas grill, turning once, until grill marks appear, about 2 minutes total."
     ],
     "image": "images/chicken-mushroom-and-bok-choy-kebabs-242629.jpg",
-    "estimatedCookTimeMins": 56,
+    "estimatedCookTimeMins": 60,
     "estimatedCostUSD": 13.42
   },
   {
@@ -2671,7 +2671,7 @@ const meals = [
       "Place greens, bok choy, cucumber, green onions, chopped cilantro, and mint in large bowl. Add 1 teaspoon red pepper, dressing, and noodles; toss to coat. Season to taste with salt and pepper. Garnish with cilantro sprigs and peanuts and serve."
     ],
     "image": "images/sesame-soba-noodles-with-cucumber-bok-choy-and-mixed-greens-242500.jpg",
-    "estimatedCookTimeMins": 57,
+    "estimatedCookTimeMins": 60,
     "estimatedCostUSD": 12.88
   },
   {
@@ -2765,7 +2765,7 @@ const meals = [
       "4. Drizzle the mixture over the vegetables, top with the nuts, and serve."
     ],
     "image": "images/chinese-broccoli-242053.jpg",
-    "estimatedCookTimeMins": 52,
+    "estimatedCookTimeMins": 55,
     "estimatedCostUSD": 7.73
   },
   {
@@ -2806,7 +2806,7 @@ const meals = [
       "Heat wok over high heat until a drop of water evaporates instantly. Pour peanut oil down side of wok, then swirl oil, tilting wok to coat side. Add garlic and stir-fry until pale golden, 5 to 10 seconds. Add half of bok choy and stir-fry until leaves wilt, about 2 minutes, then add remaining bok choy and stir-fry until all leaves are bright green and limp, 2 to 3 minutes total. Stir broth mixture, then pour into wok and stir-fry 15 seconds. Cover with lid and cook, stirring occasionally, until vegetables are crisp-tender, 2 to 4 minutes. Stir in sesame oil, then transfer to a serving dish."
     ],
     "image": "images/stir-fried-baby-bok-choy-with-garlic-240548.jpg",
-    "estimatedCookTimeMins": 38,
+    "estimatedCookTimeMins": 40,
     "estimatedCostUSD": 14.98
   },
   {
@@ -2828,7 +2828,7 @@ const meals = [
       "Arrange kale and sweet potato mixture on plate. Overlap tofu slices atop vegetables and serve."
     ],
     "image": "images/mustard-crusted-tofu-with-kale-and-sweet-potato-239827.jpg",
-    "estimatedCookTimeMins": 26,
+    "estimatedCookTimeMins": 30,
     "estimatedCostUSD": 9.96
   },
   {
@@ -2853,7 +2853,7 @@ const meals = [
       "*Chinese broccoli is also called gai lan or Chinese kale; it's available at Asian markets. Broccoli rabe is an Italian leafy green vegetable with scattered clusters of broccoli-like florets; you'll find it at some supermarkets and at specialty foods stores."
     ],
     "image": "images/arctic-char-with-chinese-broccoli-and-sweet-potato-puree-239797.jpg",
-    "estimatedCookTimeMins": 52,
+    "estimatedCookTimeMins": 55,
     "estimatedCostUSD": 5.26
   },
   {
@@ -2919,7 +2919,7 @@ const meals = [
       "Heat 14-inch-diameter flat-bottomed wok or heavy 12-inch-diameter skillet over high heat until drop of water added to wok evaporates on contact. Add 1 tablespoon peanut oil and swirl, then add tofu and stir-fry until tofu just begins to brown, about 1 minute. Transfer tofu to plate. Add remaining 1 tablespoon peanut oil to same wok (do not clean). Add carrots, celery, and Szechuan preserved vegetable and stir-fry until carrots are crisp-tender, about 3 minutes. Return tofu to wok; add rice wine, salt, sugar, and white pepper. Stir-fry to blend, about 1 minute. Remove pan from heat; stir in sesame oil and serve."
     ],
     "image": "images/five-spice-tofu-stir-fry-with-carrots-and-celery-238275.jpg",
-    "estimatedCookTimeMins": 23,
+    "estimatedCookTimeMins": 25,
     "estimatedCostUSD": 9.17
   },
   {
@@ -2977,7 +2977,7 @@ const meals = [
       "Reheat sauce, then serve tofu topped with sauce, basil, mint, and fried shallots."
     ],
     "image": "images/panfried-tofu-with-asian-caramel-sauce-238093.jpg",
-    "estimatedCookTimeMins": 28,
+    "estimatedCookTimeMins": 25,
     "estimatedCostUSD": 8.06
   },
   {
@@ -3003,7 +3003,7 @@ const meals = [
       "Transfer rice to a platter and serve."
     ],
     "image": "images/pork-fried-rice-237524.jpg",
-    "estimatedCookTimeMins": 26,
+    "estimatedCookTimeMins": 25,
     "estimatedCostUSD": 14.28
   },
   {
@@ -3028,7 +3028,7 @@ const meals = [
       "Place mushrooms and green onions on platter. Cut meat into 1/4-inch-thick slices; arrange atop green onions and mushrooms. Pour any pan juices over. Drizzle lightly with mustard sauce. Serve, passing remaining mustard sauce alongside."
     ],
     "image": "images/marinated-tri-tip-with-chinese-mustard-sauce-and-roasted-green-onions-and-mushrooms-237321.jpg",
-    "estimatedCookTimeMins": 31,
+    "estimatedCookTimeMins": 30,
     "estimatedCostUSD": 10.6
   },
   {
@@ -3057,7 +3057,7 @@ const meals = [
       "*Available in the Asian foods section of most supermarkets and at Asian markets."
     ],
     "image": "images/spicy-lime-and-herbed-tofu-in-lettuce-cups-233691.jpg",
-    "estimatedCookTimeMins": 44,
+    "estimatedCookTimeMins": 45,
     "estimatedCostUSD": 13.52
   },
   {
@@ -3084,7 +3084,7 @@ const meals = [
       "Divide yu choy among shallow bowls. Top with oxtails and sauce and sprinkle with green onions."
     ],
     "image": "images/braised-oxtails-with-star-anise-and-chinese-greens-236874.jpg",
-    "estimatedCookTimeMins": 37,
+    "estimatedCookTimeMins": 40,
     "estimatedCostUSD": 11.23
   },
   {
@@ -3110,7 +3110,7 @@ const meals = [
       "4. Scoop the squash strands out and into bowls. Top with the tofu, drizzle on the glaze, and serve."
     ],
     "image": "images/maple-glazed-tofu-with-spaghetti-squash-239218.jpg",
-    "estimatedCookTimeMins": 29,
+    "estimatedCookTimeMins": 30,
     "estimatedCostUSD": 12.97
   },
   {
@@ -3138,7 +3138,7 @@ const meals = [
       "5. Drizzle a coating of olive oil into a 13-by-9-inch baking pan. Add the pasta mixture and sprinkle the remaining cheeses over the top. Bake until golden and bubbling, 35 to 40 minutes. Let cool for 10 minutes before slicing."
     ],
     "image": "images/tofu-rigatoni-casserole-239219.jpg",
-    "estimatedCookTimeMins": 34,
+    "estimatedCookTimeMins": 35,
     "estimatedCostUSD": 14.78
   },
   {
@@ -3191,7 +3191,7 @@ const meals = [
       "Mix shrimp and next 5 ingredients in medium bowl. Heat 1 tablespoon sesame oil in same skillet over high heat. Add onions and ginger. Saut\u00e9 1 minute. Add shrimp mixture. Toss until shrimp are just opaque in center, about 3 minutes. Using slotted spoon, transfer shrimp to platter. Cook sauce until thickened, about 2 minutes. Spoon sauce over shrimp."
     ],
     "image": "images/spicy-sweet-tangerine-shrimp-with-baby-bok-choy-233394.jpg",
-    "estimatedCookTimeMins": 56,
+    "estimatedCookTimeMins": 55,
     "estimatedCostUSD": 13.28
   },
   {
@@ -3212,7 +3212,7 @@ const meals = [
       "Heat 1 tablespoon oil in large nonstick skillet over medium-high heat. Add tofu; saut\u00e9 until golden, about 4 minutes. Transfer tofu to bowl. Add remaining 1 tablespoon oil, then zucchini and bell pepper to skillet; saut\u00e9 until beginning to soften, about 4 minutes. Return tofu to skillet. Add ginger; stir 30 seconds. Add coconut milk, 3 tablespoons lime juice, soy sauce, and curry paste; stir to dissolve curry paste. Simmer until sauce thickens, about 6 minutes. Season with salt and more lime juice, if desired. Stir in half of basil. Sprinkle with remaining basil; serve."
     ],
     "image": "images/thai-tofu-with-zucchini-red-bell-pepper-and-lime-231440.jpg",
-    "estimatedCookTimeMins": 53,
+    "estimatedCookTimeMins": 55,
     "estimatedCostUSD": 14.29
   },
   {
@@ -3264,7 +3264,7 @@ const meals = [
       "Prepare barbecue (medium heat). Combine bok choy and eggplant halves in large bowl. Drizzle 2 tablespoons olive oil over and toss to coat. Sprinkle with salt and pepper. Brush fish with remaining 1 tablespoon olive oil; sprinkle with salt and pepper. Grill vegetables and fish until vegetables are tender and slightly charred and fish is just opaque in center, turning occasionally and brushing with sauce, about 10 minutes total for vegetables and 7 minutes total for fish. Transfer vegetables and fish to plates; sprinkle with green onions. Drizzle with reserved sauce and serve."
     ],
     "image": "images/grilled-halibut-eggplant-and-baby-bok-choy-with-korean-barbecue-sauce-235590.jpg",
-    "estimatedCookTimeMins": 49,
+    "estimatedCookTimeMins": 50,
     "estimatedCostUSD": 5.41
   },
   {
@@ -3297,7 +3297,7 @@ const meals = [
       "Whisk together soy sauce, lemon juice, sugar, vinegar, salt, and pepper in a small bowl, then add sesame oil and vegetable oil in a slow stream, whisking until sugar is dissolved and dressing is combined well. Toss chicken and scallions with 1/3 cup of dressing in another large bowl. Whisk remaining dressing (it will separate), then add cabbage mixture, cilantro, almonds, and sesame seeds to chicken and toss with enough remaining dressing to coat. Sprinkle with wontons (if using)."
     ],
     "image": "images/chinese-chicken-salad-234995.jpg",
-    "estimatedCookTimeMins": 52,
+    "estimatedCookTimeMins": 50,
     "estimatedCostUSD": 12.64
   },
   {
@@ -3324,7 +3324,7 @@ const meals = [
       "**Available at kalustyans.com."
     ],
     "image": "images/spicy-stir-fried-chinese-long-beans-with-peanuts-234667.jpg",
-    "estimatedCookTimeMins": 59,
+    "estimatedCookTimeMins": 60,
     "estimatedCostUSD": 13.08
   },
   {
@@ -3346,7 +3346,7 @@ const meals = [
       "Heat peanut oil in a wok or 12-inch heavy skillet over moderately high heat until smoking. Add ginger, 1/4 cup scallions, and salt and stir-fry 1 minute. Add rice and stir-fry until beginning to brown, 7 to 10 minutes. Add remaining ingredients (including scallions) and stir-fry until liquid is absorbed, about 2 minutes. Season with pepper."
     ],
     "image": "images/fried-rice-with-canadian-bacon-233994.jpg",
-    "estimatedCookTimeMins": 52,
+    "estimatedCookTimeMins": 55,
     "estimatedCostUSD": 5.66
   },
   {
@@ -3376,7 +3376,7 @@ const meals = [
       "Pour shrimp and sauce over gai lan."
     ],
     "image": "images/black-bean-shrimp-with-chinese-broccoli-233803.jpg",
-    "estimatedCookTimeMins": 34,
+    "estimatedCookTimeMins": 35,
     "estimatedCostUSD": 14.1
   },
   {
@@ -3409,7 +3409,7 @@ const meals = [
       "Put oven rack in middle position and preheat oven to 250\u00b0F. Line a large colander with paper towels. Heat 1 inch peanut oil in a 5- to 6-quart wide heavy pot until it registers 350\u00b0F on thermometer, then fry 4 or 5 egg rolls (don't crowd pot), turning with a slotted spoon, until golden brown, 3 to 5 minutes. Transfer with slotted spoon to colander and drain rolls upright 2 to 3 minutes, then keep warm on a rack set on a large baking sheet in oven. Fry remaining egg rolls in batches, transferring to colander and then to rack in oven."
     ],
     "image": "images/chinese-egg-rolls-233522.jpg",
-    "estimatedCookTimeMins": 26,
+    "estimatedCookTimeMins": 25,
     "estimatedCostUSD": 8.96
   },
   {
@@ -3455,7 +3455,7 @@ const meals = [
       "Heat wok over high heat until a drop of water vaporizes instantly upon contact. Add peanut oil, swirling to coat wok evenly, and heat until hot and just smoking. Add eggs, tilting wok and swirling eggs to form a thin even layer on cooking surface, and cook 30 seconds, then add rice and salt and stir-fry, breaking up eggs and letting rice rest several seconds between stirs, until rice is hot, 2 to 3 minutes. Add scallion greens and sesame oil (to taste) and stir-fry until combined well."
     ],
     "image": "images/egg-fried-rice-232498.jpg",
-    "estimatedCookTimeMins": 36,
+    "estimatedCookTimeMins": 35,
     "estimatedCostUSD": 8.41
   },
   {
@@ -3496,7 +3496,7 @@ const meals = [
       "Beat eggs with a fork and add a few drops of sesame oil. Add eggs to soup in a thin stream, stirring slowly in one direction with a spoon. Stir in white pepper, then drizzle in remaining sesame oil and divide among 6 to 8 bowls. Sprinkle with scallions and cilantro before serving."
     ],
     "image": "images/chinese-hot-and-sour-soup-231354.jpg",
-    "estimatedCookTimeMins": 47,
+    "estimatedCookTimeMins": 45,
     "estimatedCostUSD": 5.29
   },
   {
@@ -3521,7 +3521,7 @@ const meals = [
       "Transfer tofu with a slotted spatula to a platter and serve with cilantro pesto."
     ],
     "image": "images/broiled-tofu-with-cilantro-pesto-231002.jpg",
-    "estimatedCookTimeMins": 42,
+    "estimatedCookTimeMins": 45,
     "estimatedCostUSD": 5.49
   },
   {
@@ -3541,7 +3541,7 @@ const meals = [
       "*Hoisin sauce, a thick mixture of ground soybeans, garlic, chiles, and spices, is used as a condiment and ingredient in Chinese cooking. It can be found in the Asian foods section of many supermarkets and at Asian markets."
     ],
     "image": "images/seared-coriander-scallops-with-bok-choy-and-hoisin-230929.jpg",
-    "estimatedCookTimeMins": 37,
+    "estimatedCookTimeMins": 40,
     "estimatedCostUSD": 6.42
   },
   {
@@ -3593,7 +3593,7 @@ const meals = [
       "Heat 3 tablespoons oil in heavy small skillet over medium-low heat. Add ginger and garlic; stir 10 seconds. Add teriyaki sauce, lime juice and chili sauce; simmer 30 seconds. Mix sauce and onions into noodles. Season with salt and pepper. Serve warm or at room temperature."
     ],
     "image": "images/szechuan-sesame-noodles-102196.jpg",
-    "estimatedCookTimeMins": 46,
+    "estimatedCookTimeMins": 45,
     "estimatedCostUSD": 5.12
   },
   {
