@@ -257,36 +257,49 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   
   document.getElementById("submitCustomMeal").addEventListener("click", () => {
-    const title = document.getElementById("customMealTitle").value.trim();
-    const cost = parseFloat(document.getElementById("customMealCost").value);
-    const time = parseInt(document.getElementById("customMealTime").value);
-    const ingredients = document.getElementById("customMealIngredients").value.split(",").map(i => i.trim());
-    const instructions = document.getElementById("customMealInstructions").value.split(",").map(i => i.trim());
-    const imageInput = document.getElementById("customMealImage");
-  
-    if (!title || isNaN(cost) || isNaN(time) || ingredients.length === 0 || instructions.length === 0 || imageInput.files.length === 0) {
-      alert("Please fill out all fields and choose an image.");
+    let title = document.getElementById("customMealTitle").value.trim();
+    let cost = parseFloat(document.getElementById("customMealCost").value);
+    let time = parseInt(document.getElementById("customMealTime").value);
+    let ingredients = document.getElementById("customMealIngredients").value.split(",");
+    let instructions = document.getElementById("customMealInstructions").value.split(",");
+    let imageInput = document.getElementById("customMealImage");
+
+    if (!title || isNaN(cost) || isNaN(time) || ingredients.length === 0 || instructions.length === 0) {
+      alert("Please fill out all fields");
       return;
     }
-  
-    const fileReader = new FileReader();
-    fileReader.onload = function(e) {
+
+    let defaultCard = document.querySelector(".card");
+    let newCard = defaultCard.cloneNode(true);
+    let cardContainer = document.getElementById("card-container");
+
+    function handleNewMeal(imageSrc) {
       const newMeal = {
         title,
         estimatedCostUSD: cost,
         estimatedCookTimeMins: time,
         ingredients,
         instructions,
-        image: e.target.result
+        image: imageSrc
       };
-  
+
       meals.push(newMeal);
       originalMeals.push(newMeal);
+      createMealCard(newCard, newMeal);
+      cardContainer.appendChild(newCard);
       document.getElementById("customMealPanel").classList.add("hidden");
       filterCards(document.getElementById("searchInput").value.toLowerCase());
-    };
-    
-    fileReader.readAsDataURL(imageInput.files[0]);
+    }
+
+    if (imageInput.files.length > 0) {
+      const fileReader = new FileReader();
+      fileReader.onload = function(e) {
+        handleNewMeal(e.target.result);
+      };
+      fileReader.readAsDataURL(imageInput.files[0]);
+    } else {
+      handleNewMeal("images/default.jpg");
+    }
   });  
 
   document.getElementById("openMealPlannerPanel").addEventListener("click", () => {
