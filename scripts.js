@@ -251,6 +251,47 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   });
+
+  document.getElementById("openCustomMealPanel").addEventListener("click", () => {
+    document.getElementById("customMealPanel").classList.remove("hidden");
+  });
+  
+  document.getElementById("closeCustomMealPanel").addEventListener("click", () => {
+    document.getElementById("customMealPanel").classList.add("hidden");
+  });
+  
+  document.getElementById("submitCustomMeal").addEventListener("click", () => {
+    const title = document.getElementById("customMealTitle").value.trim();
+    const cost = parseFloat(document.getElementById("customMealCost").value);
+    const time = parseInt(document.getElementById("customMealTime").value);
+    const ingredients = document.getElementById("customMealIngredients").value.split(",").map(i => i.trim());
+    const instructions = document.getElementById("customMealInstructions").value.split(",").map(i => i.trim());
+    const imageInput = document.getElementById("customMealImage");
+  
+    if (!title || isNaN(cost) || isNaN(time) || ingredients.length === 0 || instructions.length === 0 || imageInput.files.length === 0) {
+      alert("Please fill out all fields and choose an image.");
+      return;
+    }
+  
+    const fileReader = new FileReader();
+    fileReader.onload = function(e) {
+      const newMeal = {
+        title,
+        estimatedCostUSD: cost,
+        estimatedCookTimeMins: time,
+        ingredients,
+        instructions,
+        image: e.target.result
+      };
+  
+      meals.push(newMeal);
+      originalMeals.push(newMeal);
+      document.getElementById("customMealPanel").classList.add("hidden");
+      filterCards(document.getElementById("searchInput").value.toLowerCase());
+    };
+    
+    fileReader.readAsDataURL(imageInput.files[0]);
+  });  
 });
 
 function updateButtons(){
@@ -288,6 +329,7 @@ function refreshAllergyList() {
   let allergenSearchBar = document.getElementById("allergenSearchBar");
   allergenSearchBar.innerHTML = "";
   allergiesList.forEach((allergen, index) => {
+    
     let allergyItem  = document.createElement("div");
     allergyItem.className = "allergyItem";
     allergyItem.textContent = allergen;
