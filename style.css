@@ -232,8 +232,9 @@ body {
 }
 
 .favouriteButton {
+  width: 35px;
+  height: 35px;
   background: none;
-  border: 2px solid #ff6961;
   outline: none;
   font-size: 20px;
   color: #ff6961;
@@ -241,16 +242,13 @@ body {
   padding: 5px 5px; 
   margin-left: auto;
   margin-right: 0;
-  border-radius: 10px;
   transition: transform 0.2s ease, border-color 0.2s ease;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.favouriteButton:hover {
-  transform: scale(1.2);
-}
+
 
 #ingredientsPanel {
   position: fixed;

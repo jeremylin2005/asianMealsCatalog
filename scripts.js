@@ -5,23 +5,23 @@ const originalMeals = [...meals];
 let favouritesList = [];
 let sortAlpha = false;
 let sortReverseAlpha = false;
+let sortFavourites = false;
 const maxPerPage = 20;
-let light = 9;
-let moderate = 10;
-let advanced = 14;
-let cheap = 6;
-let regular = 7;
+let light = 11;
+let moderate = 12;
+let advanced = 15;
+let cheap = 8.41;
+let regular = 9.41;
 let expensive = 9;
-let quick = 30;
-let average = 31;
-let long = 41;
+let quick = 33;
+let average = 34;
+let long = 46;
 
 getIngredientsSizing(meals);
 
 function showCards() {
-  const cardContainer = document.getElementById("card-container");
-  const defaultCard = document.querySelector(".card");
-
+  let cardContainer = document.getElementById("card-container");
+  let defaultCard = document.querySelector(".card");
   for (let i = currentPageNumber; i < currentPageNumber + maxPerPage && i < filteredMeals.length; i++) { 
     let meal = filteredMeals[i];
     let displayCard = defaultCard.cloneNode(true); 
@@ -37,14 +37,16 @@ function showCards() {
 function createMealCard(displayCard, meal) {
   displayCard.style.display = "block";
 
-  const cardHeader = displayCard.querySelector("h2");
+  let cardHeader = displayCard.querySelector("h2");
   cardHeader.textContent = meal.title;
 
-  const cardImage = displayCard.querySelector("img");
+  let cardImage = displayCard.querySelector("img");
   cardImage.src = meal.image;
   cardImage.alt = meal.title;
 
   let difficultyLabel = displayCard.querySelector(".difficulty");
+  difficultyLabel.classList.remove("easy", "medium", "hard");
+
   if(meal.ingredients.length <= light){
     difficultyLabel.textContent = "Easy";
     difficultyLabel.classList.add("easy");
@@ -74,6 +76,13 @@ function createMealCard(displayCard, meal) {
   }
 
   let heartButton = displayCard.querySelector(".favouriteButton");
+
+  if (favouritesList.includes(meal.title)) {
+    heartButton.textContent = "♥";
+  } else {
+    heartButton.textContent = "♡";
+  }
+
   heartButton.addEventListener("click", (event) => {
     event.stopPropagation();
     let alreadyFavourite = favouritesList.includes(meal.title);
@@ -89,7 +98,7 @@ function createMealCard(displayCard, meal) {
 }
 
 function filterCards(search) {
-  const cardContainer = document.getElementById("card-container");
+  let cardContainer = document.getElementById("card-container");
   cardContainer.innerHTML = "";
   currentPageNumber = 0;
 
@@ -113,15 +122,19 @@ function filterCards(search) {
     filteredMeals.sort((x,y) => y.title.localeCompare(x.title));
   }
 
+  if(sortFavourites){
+    filteredMeals = filteredMeals.filter(meal => favouritesList.includes(meal.title));
+  }
+
   window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   showCards();
 }
 
 function showIngredientsPanel(meal){
-  const ingredientsPanel = document.getElementById("ingredientsPanel");
-  const title = document.getElementById("mealTitle");
-  const list = document.getElementById("ingredientsList");
-  const instructionsList = document.getElementById("instructionsList");
+  let ingredientsPanel = document.getElementById("ingredientsPanel");
+  let title = document.getElementById("mealTitle");
+  let list = document.getElementById("ingredientsList");
+  let instructionsList = document.getElementById("instructionsList");
 
   title.textContent = meal.title;
   list.innerHTML = "";
@@ -179,6 +192,12 @@ document.addEventListener("DOMContentLoaded", () => {
     filterCards(document.getElementById("searchInput").value.toLowerCase());
   });
 
+  document.getElementById("sortFavouritesButton").addEventListener("click", () => {
+    sortFavourites = !sortFavourites;
+    updateButtons();
+    filterCards(document.getElementById("searchInput").value.toLowerCase());
+  });
+
   document.getElementById("prepFilter").addEventListener("change", function () {
     filterIngredientsSize = parseInt(this.value);
     filterCards(document.getElementById("searchInput").value.toLowerCase());
@@ -188,6 +207,7 @@ document.addEventListener("DOMContentLoaded", () => {
 function updateButtons(){
   let AZButton = document.getElementById("sortAlphaButton");
   let ZAButton = document.getElementById("sortReverseAlphaButton");
+  let favouriteButton = document.getElementById("sortFavouritesButton");
 
   if(sortAlpha){
     AZButton.classList.add("on");
@@ -199,11 +219,17 @@ function updateButtons(){
     AZButton.classList.remove("on");
     ZAButton.classList.remove("on");
   }
+
+  if(sortFavourites){
+    favouriteButton.classList.add("on");
+  } else {
+    favouriteButton.classList.remove("on");
+  }
 }
 
 
 window.addEventListener("scroll", () => {
-  const atBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 100;
+  let atBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 100;
   if (atBottom) {
     showCards();
   }
